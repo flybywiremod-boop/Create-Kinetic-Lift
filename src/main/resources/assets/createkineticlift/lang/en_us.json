@@ -1,0 +1,11 @@
+{
+  "item.createkineticlift.sapphire": "Sapphire",
+  "item.createkineticlift.raw_sapphire": "Raw Sapphire",
+
+  "block.createkineticlift.sapphire_block": "Block of Sapphire",
+  "block.createkineticlift.raw_sapphire_block": "Block of  Raw Sapphire",
+  "block.createkineticlift.control_chair": "Control Chair",
+  "block.createkineticlift.inverted_control_chair": "Inverted Control Chair",
+
+  "creativetab.createkineticlift_tab": "Create: Kinetic Lift"
+}

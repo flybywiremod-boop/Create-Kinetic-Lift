@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " #L",
+    " I_",
+    "   "
+  ],
+  "key": {
+    "#": {
+      "item": "create:precision_mechanism"
+    },
+    "L": {
+      "item": "minecraft:lever"
+    },
+    "I": {
+      "item": "interiors:blue_chair"
+    },
+    "_": {
+      "item": "minecraft:oak_slab"
+    }
+  },
+  "result": {
+    "createkineticlift:control_chair"
+  }
+}
