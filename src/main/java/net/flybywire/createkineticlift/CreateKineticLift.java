@@ -2,8 +2,12 @@ package net.flybywire.createkineticlift;
 
 import com.mojang.logging.LogUtils;
 import net.flybywire.createkineticlift.block.ModBlocks;
+import net.flybywire.createkineticlift.entity.ModEntities;
+import net.flybywire.createkineticlift.entity.custom.controlseat.ControlSeatEntityRender;
 import net.flybywire.createkineticlift.item.ModCreativeModTabs;
 import net.flybywire.createkineticlift.item.ModItems;
+import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -20,15 +24,16 @@ import org.slf4j.Logger;
 @Mod(CreateKineticLift.MOD_ID)
 public class CreateKineticLift {
     public static final String MOD_ID = "createkineticlift";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
-    public CreateKineticLift() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public CreateKineticLift(FMLJavaModLoadingContext context) {
+        IEventBus modEventBus = context.getModEventBus();
 
         ModCreativeModTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -57,7 +62,7 @@ public class CreateKineticLift {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            EntityRenderers.register(ModEntities.CONSTROL_SEAT.get(), ControlSeatEntityRender::new);
         }
     }
 }
