@@ -5,7 +5,7 @@
 	"texture_size": [128, 128],
 	"textures": {
 		"0": "createkineticlift:block/control_chair",
-		"particle": "minecraft:block/oak_planks"
+		"particle": "block/oak_planks"
 	},
 	"elements": [
 		{
@@ -108,7 +108,7 @@
 				"east": {"uv": [7.25, 1.125, 7.75, 1.375], "texture": "#0"},
 				"south": {"uv": [8.625, 1.125, 9, 1.375], "texture": "#0"},
 				"west": {"uv": [8.125, 1.125, 8.625, 1.375], "texture": "#0"},
-				"up": {"uv": [8.125, 1.125, 7.75, 0.625], "texture": "#0"},
+				"up": {"uv": [7.75, 1.125, 8.125, 0.625], "texture": "#0"},
 				"down": {"uv": [8.5, 0.625, 8.125, 1.125], "texture": "#0"}
 			}
 		},
