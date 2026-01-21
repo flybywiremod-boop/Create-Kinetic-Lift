@@ -28,7 +28,6 @@ public class ModCreativeModTabs {
                 pOutput.accept(Items.DIAMOND);
 
                 pOutput.accept(ModBlocks.CONTROL_CHAIR.get());
-                pOutput.accept(ModBlocks.INVERTED_CONTROL_CHAIR.get());
 
 
             })

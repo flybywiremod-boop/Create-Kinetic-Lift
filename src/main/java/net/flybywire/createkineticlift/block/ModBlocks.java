@@ -2,7 +2,6 @@ package net.flybywire.createkineticlift.block;
 
 import net.flybywire.createkineticlift.CreateKineticLift;
 import net.flybywire.createkineticlift.block.custom.ControlBlock;
-import net.flybywire.createkineticlift.block.custom.InvertedControlBlock;
 import net.flybywire.createkineticlift.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -27,10 +26,8 @@ public class ModBlocks {
             () -> new ControlBlock(BlockBehaviour.Properties.of()
                     .noOcclusion()
                     .isSuffocating((state, level, pos) -> false)
-                    .isViewBlocking((state, level, pos) -> false)));
-
-    public static final RegistryObject<Block> INVERTED_CONTROL_CHAIR = registerBlock("inverted_control_chair",
-            () -> new InvertedControlBlock(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE).requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
+                    .isViewBlocking((state, level, pos) -> false)
+                    .sound(SoundType.WOOD)));
 
     private static <T extends  Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name,block);
