@@ -6,7 +6,6 @@ import net.flybywire.createkineticlift.entity.ModEntities;
 import net.flybywire.createkineticlift.entity.custom.controlseat.ControlSeatEntityRender;
 import net.flybywire.createkineticlift.item.ModCreativeModTabs;
 import net.flybywire.createkineticlift.item.ModItems;
-import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -39,6 +38,7 @@ public class CreateKineticLift {
 
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
+
 
     }
 

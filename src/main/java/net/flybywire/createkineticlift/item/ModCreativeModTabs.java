@@ -30,6 +30,7 @@ public class ModCreativeModTabs {
                 pOutput.accept(ModBlocks.CONTROL_CHAIR.get());
 
 
+
             })
             .build());
 
