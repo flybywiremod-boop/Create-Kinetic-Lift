@@ -1,43 +1,61 @@
 package net.flybywire.createkineticlift.block;
 
+import com.simibubi.create.foundation.data.CreateRegistrate;
+import com.tterrag.registrate.util.entry.BlockEntry;
 import net.flybywire.createkineticlift.CreateKineticLift;
 import net.flybywire.createkineticlift.block.custom.ControlBlock;
-import net.flybywire.createkineticlift.item.ModItems;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
+import net.flybywire.createkineticlift.jetfan.FuelTankBlock;
+import net.flybywire.createkineticlift.jetfan.TurbofanFrontBlock;
+import net.flybywire.createkineticlift.jetfan.TurbofanRearBlock;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
-
-import java.util.function.Supplier;
 
 public class ModBlocks {
-    public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(ForgeRegistries.BLOCKS, CreateKineticLift.MOD_ID);
+    private static final CreateRegistrate REGISTRATE = CreateKineticLift.REGISTRATE;
 
-    public static final  RegistryObject<Block> CONTROL_CHAIR = registerBlock("control_chair",
-            () -> new ControlBlock(BlockBehaviour.Properties.of()
-                    .noOcclusion()
-                    .isSuffocating((state, level, pos) -> false)
-                    .isViewBlocking((state, level, pos) -> false)
-                    .sound(SoundType.WOOD)));
+    public static final BlockEntry<ControlBlock> CONTROL_CHAIR = REGISTRATE.block("control_chair",
+            ControlBlock::new)
+            .properties(p -> p.mapColor(MapColor.WOOD))
+            .properties(p -> p.requiresCorrectToolForDrops())
+            .properties(p -> p.sound(SoundType.WOOD))
+            .properties(p -> p.strength(1.0f))
+            .properties(p -> p.noOcclusion())
+            .simpleItem()
+            .register();
 
-    private static <T extends  Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
-        RegistryObject<T> toReturn = BLOCKS.register(name,block);
-        registerBlockItem(name, toReturn);
-        return toReturn;
-    }
+    public static final BlockEntry<TurbofanFrontBlock> TURBOFAN_FRONT = REGISTRATE.block("turbofan_front",
+            TurbofanFrontBlock::new)
+            .properties(p -> p.mapColor(MapColor.METAL))
+            .properties(p -> p.requiresCorrectToolForDrops())
+            .properties(p -> p.sound(SoundType.METAL))
+            .properties(p -> p.strength(3.5f))
+            .properties(p -> p.noOcclusion())
+            .simpleItem()
+            .register();
 
-    private  static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
-       return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
-    }
 
+    public static final BlockEntry<TurbofanRearBlock> TURBOFAN_REAR = REGISTRATE.block("turbofan_rear",
+            TurbofanRearBlock::new)
+            .properties(p -> p.mapColor(MapColor.METAL))
+            .properties(p -> p.requiresCorrectToolForDrops())
+            .properties(p -> p.sound(SoundType.METAL))
+            .properties(p -> p.strength(3.5f))
+            .properties(p -> p.noOcclusion())
+            .simpleItem()
+            .register();
+
+    public static final BlockEntry<FuelTankBlock> FUEL_TANK = REGISTRATE.block("fuel_tank",
+            FuelTankBlock::new)
+            .properties(p -> p.mapColor(MapColor.METAL))
+            .properties(p -> p.requiresCorrectToolForDrops())
+            .properties(p -> p.sound(SoundType.METAL))
+            .properties(p -> p.strength(3.0f))
+            .properties(p -> p.noOcclusion())
+            .simpleItem()
+            .register();
 
     public static void register(IEventBus eventBus) {
-        BLOCKS.register(eventBus);
+
     }
 }

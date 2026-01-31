@@ -1,9 +1,26 @@
 {
-  "item.createkineticlift.sapphire": "Sapphire",
-  "item.createkineticlift.raw_sapphire": "Raw Sapphire",
-
+  "item.createkineticlift.headphones": "Headphones",
   "block.createkineticlift.control_chair": "Control Chair",
   "block.createkineticlift.inverted_control_chair": "Inverted Control Chair",
-
-  "creativetab.createkineticlift_tab": "Create: Kinetic Lift"
+  "block.createkineticlift.turbofan_front": "Turbofan Airflow Module",
+  "block.createkineticlift.turbofan_rear": "Turbofan Exhaust Module",
+  "block.createkineticlift.control_chair.tooltip.summary": "_Controls the blocks_ and has its own GUI.",
+  "block.createkineticlift.control_chair.tooltip.condition1": "When R-Clicked with wrench",
+  "block.createkineticlift.control_chair.tooltip.behaviour1": "It changes the _Chairs variant_ to a _inverted_ one.",
+  "block.createkineticlift.control_chair.tooltip.condition2": "When Sitting on it",
+  "block.createkineticlift.control_chair.tooltip.behaviour2": "_Activates GUI_ and _unlocks mouse_ for movement. _Hold R-Click_ and move around it.",
+  "creativetab.createkineticlift_tab": "Create: Kinetic Lift",
+  "key.categories.createkineticlift": "Create: Kinetic Lift",
+  "key.createkineticlift.thrust_increase": "Thrust Increase",
+  "key.createkineticlift.thrust_decrease": "Thrust Decrease",
+  "key.createkineticlift.pitch_down": "Pitch Down (W)",
+  "key.createkineticlift.pitch_up": "Pitch Up (S)",
+  "key.createkineticlift.roll_left": "Roll Left (A)",
+  "key.createkineticlift.roll_right": "Roll Right (D)",
+  "key.createkineticlift.yaw_left": "Yaw Left (X)",
+  "key.createkineticlift.yaw_right": "Yaw Right (Y)",
+  "key.createkineticlift.reverse_thrust": "Reverse Thrust (R)",
+  "key.createkineticlift.flaps_up": "Flaps Up",
+  "key.createkineticlift.flaps_down": "Flaps Down",
+  "key.createkineticlift.spoilers": "Toggle Spoilers"
 }

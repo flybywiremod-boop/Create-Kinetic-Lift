@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "assembled=false,facing=north,reverse_thrust=false": {
+      "model": "createkineticlift:block/turbofan_rear"
+    },
+    "assembled=false,facing=east,reverse_thrust=false": {
+      "model": "createkineticlift:block/turbofan_rear",
+      "y": 90
+    },
+    "assembled=false,facing=south,reverse_thrust=false": {
+      "model": "createkineticlift:block/turbofan_rear",
+      "y": 180
+    },
+    "assembled=false,facing=west,reverse_thrust=false": {
+      "model": "createkineticlift:block/turbofan_rear",
+      "y": 270
+    },
+    "assembled=true,facing=north,reverse_thrust=false": {
+      "model": "createkineticlift:block/turbofan_rear_assembled"
+    },
+    "assembled=true,facing=east,reverse_thrust=false": {
+      "model": "createkineticlift:block/turbofan_rear_assembled",
+      "y": 90
+    },
+    "assembled=true,facing=south,reverse_thrust=false": {
+      "model": "createkineticlift:block/turbofan_rear_assembled",
+      "y": 180
+    },
+    "assembled=true,facing=west,reverse_thrust=false": {
+      "model": "createkineticlift:block/turbofan_rear_assembled",
+      "y": 270
+    },
+    "assembled=false,facing=north,reverse_thrust=true": {
+      "model": "createkineticlift:block/turbofan_rear_reverse"
+    },
+    "assembled=false,facing=east,reverse_thrust=true": {
+      "model": "createkineticlift:block/turbofan_rear_reverse",
+      "y": 90
+    },
+    "assembled=false,facing=south,reverse_thrust=true": {
+      "model": "createkineticlift:block/turbofan_rear_reverse",
+      "y": 180
+    },
+    "assembled=false,facing=west,reverse_thrust=true": {
+      "model": "createkineticlift:block/turbofan_rear_reverse",
+      "y": 270
+    },
+    "assembled=true,facing=north,reverse_thrust=true": {
+      "model": "createkineticlift:block/turbofan_rear_reverse"
+    },
+    "assembled=true,facing=east,reverse_thrust=true": {
+      "model": "createkineticlift:block/turbofan_rear_reverse",
+      "y": 90
+    },
+    "assembled=true,facing=south,reverse_thrust=true": {
+      "model": "createkineticlift:block/turbofan_rear_reverse",
+      "y": 180
+    },
+    "assembled=true,facing=west,reverse_thrust=true": {
+      "model": "createkineticlift:block/turbofan_rear_reverse",
+      "y": 270
+    }
+  }
+}

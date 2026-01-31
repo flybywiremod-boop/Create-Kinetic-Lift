@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "111",
+    "2 2",
+    "   "
+  ],
+  "key": {
+    "2": {
+      "tag": "minecraft:wool"
+    },
+    "1": {
+      "item": "create:andesite_alloy"
+    }
+  },
+  "result": {
+    "count": 1,
+    "item": "createkineticlift:headphones"
+  }
+}

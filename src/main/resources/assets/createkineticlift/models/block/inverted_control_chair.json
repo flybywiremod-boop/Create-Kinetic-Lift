@@ -5,7 +5,7 @@
 	"texture_size": [128, 128],
 	"textures": {
 		"0": "createkineticlift:block/control_chair",
-		"particle": "minecraft:block/oak_planks"
+		"particle": "block/oak_planks"
 	},
 	"elements": [
 		{

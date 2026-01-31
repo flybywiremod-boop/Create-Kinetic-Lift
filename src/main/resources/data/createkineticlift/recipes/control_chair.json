@@ -14,13 +14,14 @@
       "item": "minecraft:lever"
     },
     "I": {
-      "item": "interiors:blue_chair"
+      "tag": "create:seats"
     },
     "_": {
-      "item": "minecraft:oak_slab"
+      "tag": "minecraft:slabs"
     }
   },
   "result": {
-    "createkineticlift:control_chair"
+    "count": 1,
+    "item": "createkineticlift:control_chair"
   }
 }

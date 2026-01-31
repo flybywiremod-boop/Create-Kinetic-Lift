@@ -22,15 +22,15 @@ public class ModCreativeModTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.CONTROL_CHAIR.get()))
             .title(Component.translatable("Create: Kinetic Lift"))
             .displayItems((pParameters, pOutput) -> {
-                pOutput.accept(ModItems.SAPPHIRE.get());
-                pOutput.accept(ModItems.RAW_SAPPHIRE.get());
-
-                pOutput.accept(Items.DIAMOND);
-
+                // Control blocks
                 pOutput.accept(ModBlocks.CONTROL_CHAIR.get());
 
+                // Turbofan blocks
+                pOutput.accept(ModBlocks.TURBOFAN_FRONT.get());
+                pOutput.accept(ModBlocks.TURBOFAN_REAR.get());
 
-
+                // Custom Items
+                pOutput.accept(ModItems.HEADPHONES.get());
             })
             .build());
 
