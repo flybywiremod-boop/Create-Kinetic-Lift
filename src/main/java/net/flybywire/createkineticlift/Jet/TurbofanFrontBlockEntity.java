@@ -87,7 +87,7 @@ public class TurbofanFrontBlockEntity extends BlockEntity implements MenuProvide
         if (stack.isEmpty()) return false;
 
         String registryName = stack.getFluid().builtInRegistryHolder().key().location().toString().toLowerCase();
-        return registryName.contains("napttha") ||
+        return registryName.contains("naphtha") ||
                 registryName.contains("turpentine") ||
                 registryName.contains("kerosene") ||
                 registryName.contains("diesel");
@@ -101,7 +101,7 @@ public class TurbofanFrontBlockEntity extends BlockEntity implements MenuProvide
         if (registryName.contains("kerosene")) {
             return 1.2f;
         }
-        if (registryName.contains("propulsion") || registryName.contains("turpentine")) {
+        if (registryName.contains("naphtha") || registryName.contains("turpentine")) {
             return 1.0f;
         }
         if (registryName.contains("diesel")) {
