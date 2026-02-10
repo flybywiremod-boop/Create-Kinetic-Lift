@@ -4,9 +4,8 @@ import com.simibubi.create.AllItems;
 import com.simibubi.create.AllSoundEvents;
 import com.simibubi.create.Create;
 import com.simibubi.create.content.equipment.wrench.IWrenchable;
-import net.flybywire.createkineticlift.CreateKineticLift;
-import net.flybywire.createkineticlift.entity.ModEntities;
 import net.flybywire.createkineticlift.entity.custom.controlseat.ControlSeatEntity;
+import net.flybywire.createkineticlift.registries.KineticEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -104,7 +103,7 @@ public class ControlBlock extends Block implements IWrenchable {
 
                 ServerLevel serverLevel = (ServerLevel) pLevel;
 
-                ControlSeatEntity controlSeatEntity = ModEntities.CONSTROL_SEAT.get().create(serverLevel);
+                ControlSeatEntity controlSeatEntity = KineticEntities.CONSTROL_SEAT.get().create(serverLevel);
 
 
                 if (controlSeatEntity != null) {

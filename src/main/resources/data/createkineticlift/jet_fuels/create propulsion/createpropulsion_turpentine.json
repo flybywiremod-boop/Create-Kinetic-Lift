@@ -1,0 +1,6 @@
+{
+  "fluid": "createpropulsion:turpentine",
+  "thrust_multiplier": 0.95,
+  "consumption_multiplier": 0.2,
+  "require_mod": "createpropulsion"
+}

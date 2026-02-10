@@ -1,15 +1,31 @@
 {
   "item.createkineticlift.headphones": "Headphones",
+
   "block.createkineticlift.control_chair": "Control Chair",
   "block.createkineticlift.inverted_control_chair": "Inverted Control Chair",
   "block.createkineticlift.turbofan_front": "Turbofan Airflow Module",
   "block.createkineticlift.turbofan_rear": "Turbofan Exhaust Module",
-  "block.createkineticlift.control_chair.tooltip.summary": "_Controls the blocks_ and has its own GUI.",
-  "block.createkineticlift.control_chair.tooltip.condition1": "When R-Clicked with wrench",
-  "block.createkineticlift.control_chair.tooltip.behaviour1": "It changes the _Chairs variant_ to a _inverted_ one.",
-  "block.createkineticlift.control_chair.tooltip.condition2": "When Sitting on it",
-  "block.createkineticlift.control_chair.tooltip.behaviour2": "_Activates GUI_ and _unlocks mouse_ for movement. _Hold R-Click_ and move around it.",
+
+  "block.createkineticlift.control_chair.tooltip.summary": "When seated a _GUI will appear on your screen_ that gives you _information_.",
+  "block.createkineticlift.control_chair.tooltip.condition1": "When R-Clicked",
+  "block.createkineticlift.control_chair.tooltip.behaviour1": "You will sit on the chair and then your _keyboard/joystick_ will connect to the chairs sidestick, and lets you _control the plane_.",
+  "block.createkineticlift.control_chair.tooltip.condition2": "When R-Clicked with wrench",
+  "block.createkineticlift.control_chair.tooltip.behaviour2": "The chair will change into a _co-pilot_ variant.",
+
+  "block.createkineticlift.turbofan_front.tooltip.summary": "Creates thrust up to _185 BPS_, and it's more efficient.",
+  "block.createkineticlift.turbofan_front.tooltip.condition1": "Assembly",
+  "block.createkineticlift.turbofan_front.tooltip.behaviour1": "For assembly you need to put _Nozzle_ to make it work.",
+  "block.createkineticlift.turbofan_front.tooltip.condition2": "Information",
+  "block.createkineticlift.turbofan_front.tooltip.behaviour2": "Required: _Nozzle_",
+  "block.createkineticlift.turbofan_front.tooltip.condition3": "Failures",
+  "block.createkineticlift.turbofan_front.tooltip.behaviour3": "Jet engines can have failures like fire, bird strikes.",
+
+  "item.createkinetilicft.headphones.tooltip.summary": "Lets you talk with _ATC_",
+  "item.createkinetilicft.headphones.tooltip.condition": "Radio",
+  "item.createkinetilicft.headphones.tooltip.behaviour": "Talk to the _ATC Tower_ through specific code/Computers.",
+
   "creativetab.createkineticlift_tab": "Create: Kinetic Lift",
+
   "key.categories.createkineticlift": "Create: Kinetic Lift",
   "key.createkineticlift.thrust_increase": "Thrust Increase",
   "key.createkineticlift.thrust_decrease": "Thrust Decrease",

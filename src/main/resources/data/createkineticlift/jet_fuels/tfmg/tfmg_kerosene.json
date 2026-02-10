@@ -1,0 +1,6 @@
+{
+  "fluid": "tfmg:kerosene",
+  "jet_multiplier": 1.0,
+  "consumption_multiplier": 0.1,
+  "required_mod": "tfmg"
+}

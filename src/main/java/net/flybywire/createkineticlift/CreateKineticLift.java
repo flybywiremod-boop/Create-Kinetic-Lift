@@ -1,20 +1,16 @@
 package net.flybywire.createkineticlift;
 
 import com.mojang.logging.LogUtils;
-import com.simibubi.create.CreateBuildInfo;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.item.ItemDescription;
 import com.simibubi.create.foundation.item.KineticStats;
 import com.simibubi.create.foundation.item.TooltipModifier;
 import net.createmod.catnip.lang.FontHelper;
-import net.flybywire.createkineticlift.block.ModBlocks;
-import net.flybywire.createkineticlift.block.entity.ModBlockEntities;
+import net.flybywire.createkineticlift.block.KineticBlocks;
+import net.flybywire.createkineticlift.input.KineticKeyBinds;
+import net.flybywire.createkineticlift.registries.*;
 import net.flybywire.createkineticlift.client.renderer.TurbofanFrontRenderer;
-import net.flybywire.createkineticlift.entity.ModEntities;
 import net.flybywire.createkineticlift.entity.custom.controlseat.ControlSeatEntityRender;
-import net.flybywire.createkineticlift.input.ModKeybinds;
-import net.flybywire.createkineticlift.item.ModCreativeModTabs;
-import net.flybywire.createkineticlift.item.ModItems;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.resources.ResourceKey;
@@ -27,15 +23,11 @@ import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModContainer;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
-
-import static com.mojang.text2speech.Narrator.LOGGER;
 
 @Mod(CreateKineticLift.MOD_ID)
 public class CreateKineticLift {
@@ -51,14 +43,15 @@ public class CreateKineticLift {
     public CreateKineticLift(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
 
-        CreateKineticLift.REGISTRATE.registerEventListeners(modEventBus);
+        CreateKineticLift.
+                REGISTRATE.registerEventListeners(modEventBus);
 
-        ModCreativeModTabs.register(modEventBus);
+        KineticCreativeTabs.register(modEventBus);
 
-        ModItems.register(modEventBus);
-        ModBlocks.register(modEventBus);
-        ModBlockEntities.register(modEventBus);
-        ModEntities.register(modEventBus);
+        KineticItems.register(modEventBus);
+        KineticBlocks.register(modEventBus);
+        KineticBlockEntities.register(modEventBus);
+        KineticEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -73,7 +66,7 @@ public class CreateKineticLift {
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES)
-            event.accept(ModItems.HEADPHONES);
+            event.accept(KineticItems.HEADPHONES);
 
 
 }
@@ -88,15 +81,14 @@ public class CreateKineticLift {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             // Register entity renderers
-            EntityRenderers.register(ModEntities.CONSTROL_SEAT.get(), ControlSeatEntityRender::new);
+            EntityRenderers.register(KineticEntities.CONSTROL_SEAT.get(), ControlSeatEntityRender::new);
 
             // Register block entity renderers
-            BlockEntityRenderers.register(ModBlockEntities.TURBOFAN_FRONT.get(), TurbofanFrontRenderer::new);
+            BlockEntityRenderers.register(KineticBlockEntities.TURBOFAN_FRONT.get(), TurbofanFrontRenderer::new);
         }
 
         @SubscribeEvent
-        public static void onRegisterKeyMappings(RegisterKeyMappingsEvent event) {
-            ModKeybinds.register(event);
+        public static void onRegisterKeyMappings(RegisterKeyMappingsEvent event) {KineticKeyBinds.KineticKeybinds.register(event);
         }
     }
 }

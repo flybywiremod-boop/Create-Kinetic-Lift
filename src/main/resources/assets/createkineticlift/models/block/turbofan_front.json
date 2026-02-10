@@ -1,7 +1,0 @@
-{
-  "credit": "Placeholder model - Replace with proper turbofan model",
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "minecraft:block/iron_block"
-  }
-}
