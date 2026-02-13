@@ -3,7 +3,7 @@
   "credit": "Made with Blockbench",
   "texture_size": [32, 32],
   "textures": {
-    "1": "Pictures/Screenshots/red_cable"
+    "1": "createkineticlift:item/red_cable"
   },
   "elements": [
     {
