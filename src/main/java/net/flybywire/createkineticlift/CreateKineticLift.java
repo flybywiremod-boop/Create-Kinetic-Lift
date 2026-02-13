@@ -66,13 +66,9 @@ public class CreateKineticLift {
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES)
-            event.accept(KineticItems.HEADPHONES);
+            event.accept(KineticItems.RED_CABLE);
 
 
-}
-
-    @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event) {
 
     }
 

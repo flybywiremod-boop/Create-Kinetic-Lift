@@ -29,7 +29,7 @@ public class KineticBlocks {
             .properties(p -> p.mapColor(MapColor.METAL))
             .properties(p -> p.requiresCorrectToolForDrops())
             .properties(p -> p.sound(SoundType.METAL))
-            .properties(p -> p.strength(3.5f))
+            .properties(p -> p.strength(5.5f,4.0f))
             .properties(p -> p.noOcclusion())
             .simpleItem()
             .register();
@@ -40,7 +40,7 @@ public class KineticBlocks {
             .properties(p -> p.mapColor(MapColor.METAL))
             .properties(p -> p.requiresCorrectToolForDrops())
             .properties(p -> p.sound(SoundType.METAL))
-            .properties(p -> p.strength(3.5f))
+            .properties(p -> p.strength(5.5f, 4.0f))
             .properties(p -> p.noOcclusion())
             .simpleItem()
             .register();
