@@ -36,7 +36,7 @@ import org.jetbrains.annotations.Nullable;
  * Front Turbofan Block - Intake side
  *
  * Features:
- * - Accepts fluid input (turpentine/propulsion fluid, kerosene, diesel)
+ * - Accepts fluid input (turpentine fluid, kerosene, diesel, naphtha)
  * - Needs rear part for assembly
  * - When assembled, creates thrust up to 185 Bps
  * - Blade animation when running (angled + blur at high speed)

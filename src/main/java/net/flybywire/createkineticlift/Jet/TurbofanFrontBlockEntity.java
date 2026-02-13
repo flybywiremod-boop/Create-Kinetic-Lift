@@ -26,7 +26,7 @@ import org.jetbrains.annotations.Nullable;
  * Front Turbofan Block Entity
  *
  * Handles:
- * - Fluid storage and consumption (turpentine, kerosene, diesel)
+ * - Fluid storage and consumption (turpentine, kerosene, diesel, naphtha)
  * - Thrust calculation based on fuel type and amount
  * - Assembly state with rear turbofan
  * - Blade rotation speed tracking
