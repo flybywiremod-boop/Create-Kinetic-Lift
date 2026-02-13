@@ -102,7 +102,7 @@ public class ControlBlock extends Block implements IWrenchable {
 
                 ServerLevel serverLevel = (ServerLevel) pLevel;
 
-                ControlSeatEntity controlSeatEntity = KineticEntities.CONSTROL_SEAT.get().create(serverLevel);
+                ControlSeatEntity controlSeatEntity = KineticEntities.CONTROL_SEAT.get().create(serverLevel);
 
 
                 if (controlSeatEntity != null) {

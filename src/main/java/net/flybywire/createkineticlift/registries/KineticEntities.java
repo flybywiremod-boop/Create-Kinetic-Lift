@@ -13,7 +13,7 @@ public class KineticEntities {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
             DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, CreateKineticLift.MOD_ID);
 
-    public static final RegistryObject<EntityType<ControlSeatEntity>> CONSTROL_SEAT =
+    public static final RegistryObject<EntityType<ControlSeatEntity>> CONTROL_SEAT =
             ENTITY_TYPES.register("control_seat", () -> EntityType.Builder.of(ControlSeatEntity::new, MobCategory.MISC)
                     .sized(0.5f, 0.5f).build("control_seat"));
 

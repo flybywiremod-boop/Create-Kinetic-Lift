@@ -25,7 +25,7 @@ public class KineticCreativeTabs {
                         pOutput.accept(KineticBlocks.TURBOFAN_REAR.get());
 
                         // Custom Items
-                        pOutput.accept(KineticItems.HEADPHONES.get());
+                        // pOutput.accept(KineticItems.HEADPHONES.get());
                         pOutput.accept(KineticItems.RED_CABLE.get());
                     })
                     .build());

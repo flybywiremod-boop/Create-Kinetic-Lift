@@ -66,7 +66,7 @@ public class CreateKineticLift {
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES)
-            event.accept(KineticItems.RED_CABLE);
+            event.accept(KineticItems.RED_CABLE.get());
 
 
 
@@ -77,7 +77,7 @@ public class CreateKineticLift {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             // Register entity renderers
-            EntityRenderers.register(KineticEntities.CONSTROL_SEAT.get(), ControlSeatEntityRender::new);
+            EntityRenderers.register(KineticEntities.CONTROL_SEAT.get(), ControlSeatEntityRender::new);
 
             // Register block entity renderers
             BlockEntityRenderers.register(KineticBlockEntities.TURBOFAN_FRONT.get(), TurbofanFrontRenderer::new);
