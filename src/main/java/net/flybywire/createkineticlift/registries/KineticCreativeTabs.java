@@ -1,7 +1,6 @@
 package net.flybywire.createkineticlift.registries;
 
 import net.flybywire.createkineticlift.CreateKineticLift;
-import net.flybywire.createkineticlift.block.KineticBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -27,6 +26,7 @@ public class KineticCreativeTabs {
 
                         // Custom Items
                         pOutput.accept(KineticItems.HEADPHONES.get());
+                        pOutput.accept(KineticItems.RED_CABLE.get());
                     })
                     .build());
 

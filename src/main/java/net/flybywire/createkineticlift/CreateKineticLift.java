@@ -6,7 +6,7 @@ import com.simibubi.create.foundation.item.ItemDescription;
 import com.simibubi.create.foundation.item.KineticStats;
 import com.simibubi.create.foundation.item.TooltipModifier;
 import net.createmod.catnip.lang.FontHelper;
-import net.flybywire.createkineticlift.block.KineticBlocks;
+import net.flybywire.createkineticlift.registries.KineticBlocks;
 import net.flybywire.createkineticlift.input.KineticKeyBinds;
 import net.flybywire.createkineticlift.registries.*;
 import net.flybywire.createkineticlift.client.renderer.TurbofanFrontRenderer;

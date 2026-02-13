@@ -1,10 +1,9 @@
-package net.flybywire.createkineticlift.block;
+package net.flybywire.createkineticlift.registries;
 
 
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import net.flybywire.createkineticlift.CreateKineticLift;
-import net.flybywire.createkineticlift.block.custom.ControlBlock;
 import net.flybywire.createkineticlift.Jet.FuelTankBlock;
 import net.flybywire.createkineticlift.Jet.TurbofanFrontBlock;
 import net.flybywire.createkineticlift.Jet.TurbofanRearBlock;

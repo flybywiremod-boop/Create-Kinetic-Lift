@@ -1,11 +1,10 @@
-package net.flybywire.createkineticlift.block.custom;
+package net.flybywire.createkineticlift.registries;
 
 import com.simibubi.create.AllItems;
 import com.simibubi.create.AllSoundEvents;
 import com.simibubi.create.Create;
 import com.simibubi.create.content.equipment.wrench.IWrenchable;
 import net.flybywire.createkineticlift.entity.custom.controlseat.ControlSeatEntity;
-import net.flybywire.createkineticlift.registries.KineticEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
