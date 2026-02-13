@@ -1,9 +1,9 @@
 package net.flybywire.createkineticlift.registries;
 
 import net.flybywire.createkineticlift.CreateKineticLift;
-import net.flybywire.createkineticlift.Jet.FuelTankBlockEntity;
-import net.flybywire.createkineticlift.Jet.TurbofanFrontBlockEntity;
-import net.flybywire.createkineticlift.Jet.TurbofanRearBlockEntity;
+import net.flybywire.createkineticlift.jet.FuelTankBlockEntity;
+import net.flybywire.createkineticlift.jet.TurbofanFrontBlockEntity;
+import net.flybywire.createkineticlift.jet.TurbofanRearBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;

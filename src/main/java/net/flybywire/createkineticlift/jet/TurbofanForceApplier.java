@@ -1,4 +1,4 @@
-package net.flybywire.createkineticlift.Jet;
+package net.flybywire.createkineticlift.jet;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

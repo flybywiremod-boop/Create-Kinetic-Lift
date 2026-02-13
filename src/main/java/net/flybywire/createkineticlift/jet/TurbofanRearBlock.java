@@ -1,4 +1,4 @@
-package net.flybywire.createkineticlift.Jet;
+package net.flybywire.createkineticlift.jet;
 
 import com.simibubi.create.content.equipment.wrench.IWrenchable;
 import net.flybywire.createkineticlift.registries.KineticBlockEntities;

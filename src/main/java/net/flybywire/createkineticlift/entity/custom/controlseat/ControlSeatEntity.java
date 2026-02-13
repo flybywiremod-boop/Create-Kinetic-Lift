@@ -1,7 +1,7 @@
 package net.flybywire.createkineticlift.entity.custom.controlseat;
 
-import net.flybywire.createkineticlift.Jet.TurbofanFrontBlockEntity;
-import net.flybywire.createkineticlift.Jet.TurbofanRearBlockEntity;
+import net.flybywire.createkineticlift.jet.TurbofanFrontBlockEntity;
+import net.flybywire.createkineticlift.jet.TurbofanRearBlockEntity;
 import net.flybywire.createkineticlift.input.AircraftControlInput;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;

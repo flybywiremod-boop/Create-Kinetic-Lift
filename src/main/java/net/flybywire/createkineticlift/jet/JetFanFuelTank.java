@@ -1,4 +1,4 @@
-package net.flybywire.createkineticlift.Jet;
+package net.flybywire.createkineticlift.jet;
 
 public class JetFanFuelTank {
 

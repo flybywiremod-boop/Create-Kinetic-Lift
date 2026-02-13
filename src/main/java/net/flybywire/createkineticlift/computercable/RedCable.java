@@ -1,4 +1,4 @@
-package net.flybywire.createkineticlift.ComputerCable;
+package net.flybywire.createkineticlift.computercable;
 
 import net.minecraft.world.item.Item;
 
