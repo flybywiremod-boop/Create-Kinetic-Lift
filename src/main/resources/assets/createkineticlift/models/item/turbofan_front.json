@@ -1,3 +1,3 @@
 {
-  "parent":"createkineticlift:block/turbofan_front"
+  "parent": "createkineticlift:partial/turbofan_front"
 }

@@ -1,4 +1,4 @@
-package net.flybywire.createkineticlift.entity.custom.controlseat;
+package net.flybywire.createkineticlift.controlblock;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.MultiBufferSource;

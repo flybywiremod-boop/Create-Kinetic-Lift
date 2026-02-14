@@ -1,11 +1,11 @@
 {
-  "item.createkineticlift.headphones": "Headphones",
-  "item.createkineticlift.red_cable": "Aircraft Cable",
+  "item.createkineticlift.iron_blade": "Fan Blade",
+  "item.createkineticlift.red_cable": "Computer Cable",
 
   "block.createkineticlift.control_chair": "Control Chair",
   "block.createkineticlift.inverted_control_chair": "Inverted Control Chair",
-  "block.createkineticlift.turbofan_front": "Turbofan Airflow Module",
-  "block.createkineticlift.turbofan_rear": "Turbofan Exhaust Module",
+  "block.createkineticlift.turbofan_front": "Turbofan Airflow",
+  "block.createkineticlift.turbofan_rear": "Turbofan Exhaust",
 
   "block.createkineticlift.control_chair.tooltip.summary": "When seated a _GUI will appear on your screen_ that gives you _information_.",
   "block.createkineticlift.control_chair.tooltip.condition1": "When R-Clicked",
@@ -13,31 +13,15 @@
   "block.createkineticlift.control_chair.tooltip.condition2": "When R-Clicked with wrench",
   "block.createkineticlift.control_chair.tooltip.behaviour2": "The chair will change into a _co-pilot_ variant.",
 
-  "block.createkineticlift.turbofan_front.tooltip.summary": "Creates thrust up to _185 BPS_, and it's more efficient.",
+  "block.createkineticlift.turbofan_front.tooltip.summary": "Creates thrust up to _185 BPS_, and it's more efficient _20mB/s_.",
   "block.createkineticlift.turbofan_front.tooltip.condition1": "Assembly",
-  "block.createkineticlift.turbofan_front.tooltip.behaviour1": "For assembly you need to put _Nozzle_ to make it work.",
+  "block.createkineticlift.turbofan_front.tooltip.behaviour1": "For assembly you need to put _exhaust_ to make it work.",
   "block.createkineticlift.turbofan_front.tooltip.condition2": "Information",
-  "block.createkineticlift.turbofan_front.tooltip.behaviour2": "Required: _Nozzle_",
-  "block.createkineticlift.turbofan_front.tooltip.condition3": "Failures",
-  "block.createkineticlift.turbofan_front.tooltip.behaviour3": "Jet engines can have failures like fire, bird strikes.",
+  "block.createkineticlift.turbofan_front.tooltip.behaviour2": "Connect it with _control chair_ to work.",
 
-  "item.createkinetilicft.headphones.tooltip.summary": "Lets you talk with _ATC_",
-  "item.createkinetilicft.headphones.tooltip.condition": "Radio",
-  "item.createkinetilicft.headphones.tooltip.behaviour": "Talk to the _ATC Tower_ through specific code/Computers.",
+  "item.createkinetilicft.headphones.tooltip.summary": "Connect the chair with Computer Cable.",
+  "item.createkinetilicft.headphones.tooltip.condition": "Connecting",
+  "item.createkinetilicft.headphones.tooltip.behaviour": "R-Click the chair, and you have main _input_. R-Click other blocks, and you have an _output_!",
 
-  "creativetab.createkineticlift_tab": "Create: Kinetic Lift",
-
-  "key.categories.createkineticlift": "Create: Kinetic Lift",
-  "key.createkineticlift.thrust_increase": "Thrust Increase",
-  "key.createkineticlift.thrust_decrease": "Thrust Decrease",
-  "key.createkineticlift.pitch_down": "Pitch Down (W)",
-  "key.createkineticlift.pitch_up": "Pitch Up (S)",
-  "key.createkineticlift.roll_left": "Roll Left (A)",
-  "key.createkineticlift.roll_right": "Roll Right (D)",
-  "key.createkineticlift.yaw_left": "Yaw Left (X)",
-  "key.createkineticlift.yaw_right": "Yaw Right (Y)",
-  "key.createkineticlift.reverse_thrust": "Reverse Thrust (R)",
-  "key.createkineticlift.flaps_up": "Flaps Up",
-  "key.createkineticlift.flaps_down": "Flaps Down",
-  "key.createkineticlift.spoilers": "Toggle Spoilers"
+  "creativetab.createkineticlift_tab": "Create: Kinetic Lift"
 }

@@ -1,7 +1,7 @@
 package net.flybywire.createkineticlift.registries;
 
 import net.flybywire.createkineticlift.CreateKineticLift;
-import net.flybywire.createkineticlift.entity.custom.controlseat.ControlSeatEntity;
+import net.flybywire.createkineticlift.controlblock.ControlSeatEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraftforge.eventbus.api.IEventBus;

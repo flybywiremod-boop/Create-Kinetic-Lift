@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " 1 ",
+    " 1 ",
+    " 2 "
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:iron"
+    },
+    "2": {
+      "item": "create:iron_sheet"
+    }
+  },
+  "result": {
+    "count": 1,
+    "item": "createkineticlift:iron_blade"
+  }
+}

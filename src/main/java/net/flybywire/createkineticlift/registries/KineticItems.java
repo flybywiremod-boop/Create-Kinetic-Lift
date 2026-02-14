@@ -16,6 +16,12 @@ public class KineticItems {
                     .model(AssetLookup.itemModelWithPartials())
                     .register();
 
+    public static final ItemEntry<Item> IRON_BLADE =
+            REGISTRATE.item("iron_blade", Item::new)
+                    .properties(p -> p.stacksTo(1))
+                    .model(AssetLookup.itemModelWithPartials())
+                    .register();
+
     public static void register(IEventBus modEventBus) {
     }
 }
