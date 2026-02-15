@@ -1,5 +1,7 @@
 package net.flybywire.createkineticlift.registries;
 
+// TODO: Rewrite this, use Registrate instead
+
 // public class KineticBlockEntities {
  //  public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
   //          DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, CreateKineticLift.MOD_ID);

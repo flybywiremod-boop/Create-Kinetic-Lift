@@ -2,26 +2,25 @@
   "item.createkineticlift.iron_blade": "Fan Blade",
   "item.createkineticlift.red_cable": "Computer Cable",
 
-  "block.createkineticlift.control_chair": "Control Chair",
-  "block.createkineticlift.inverted_control_chair": "Inverted Control Chair",
+  "block.createkineticlift.control_seat": "Control Seat",
   "block.createkineticlift.turbofan_front": "Turbofan Airflow",
   "block.createkineticlift.turbofan_rear": "Turbofan Exhaust",
 
-  "block.createkineticlift.control_chair.tooltip.summary": "When seated a _GUI will appear on your screen_ that gives you _information_.",
-  "block.createkineticlift.control_chair.tooltip.condition1": "When R-Clicked",
-  "block.createkineticlift.control_chair.tooltip.behaviour1": "You will sit on the chair and then your _keyboard/joystick_ will connect to the chairs sidestick, and lets you _control the plane_.",
-  "block.createkineticlift.control_chair.tooltip.condition2": "When R-Clicked with wrench",
-  "block.createkineticlift.control_chair.tooltip.behaviour2": "The chair will change into a _co-pilot_ variant.",
+  "block.createkineticlift.control_seat.tooltip.summary": "When seated a _GUI will appear on your screen_ that gives you _information_.",
+  "block.createkineticlift.control_seat.tooltip.condition1": "When R-Clicked",
+  "block.createkineticlift.control_seat.tooltip.behaviour1": "You will sit on the seat and then your _keyboard/joystick_ will connect to the seat's sidestick, and lets you _control the plane_.",
+  "block.createkineticlift.control_seat.tooltip.condition2": "When R-Clicked with wrench",
+  "block.createkineticlift.control_seat.tooltip.behaviour2": "The seat will change into a _co-pilot_ variant.",
 
   "block.createkineticlift.turbofan_front.tooltip.summary": "Creates thrust up to _185 BPS_, and it's more efficient _20mB/s_.",
   "block.createkineticlift.turbofan_front.tooltip.condition1": "Assembly",
   "block.createkineticlift.turbofan_front.tooltip.behaviour1": "For assembly you need to put _exhaust_ to make it work.",
   "block.createkineticlift.turbofan_front.tooltip.condition2": "Information",
-  "block.createkineticlift.turbofan_front.tooltip.behaviour2": "Connect it with _control chair_ to work.",
+  "block.createkineticlift.turbofan_front.tooltip.behaviour2": "Connect it with _control seat_ to work.",
 
-  "item.createkinetilicft.headphones.tooltip.summary": "Connect the chair with Computer Cable.",
+  "item.createkinetilicft.headphones.tooltip.summary": "Connect the seat with Computer Cable.",
   "item.createkinetilicft.headphones.tooltip.condition": "Connecting",
-  "item.createkinetilicft.headphones.tooltip.behaviour": "R-Click the chair, and you have main _input_. R-Click other blocks, and you have an _output_!",
+  "item.createkinetilicft.headphones.tooltip.behaviour": "R-Click the seat, and you have main _input_. R-Click other blocks, and you have an _output_!",
 
-  "creativetab.createkineticlift_tab": "Create: Kinetic Lift"
+  "itemGroup.createkineticlift.create_tab": "Create: Kinetic Lift"
 }

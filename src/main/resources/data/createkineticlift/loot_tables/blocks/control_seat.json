@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "createkineticlift:inverted_control_chair"
+          "name": "createkineticlift:control_seat"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "createkineticlift:blocks/inverted_control_chair"
+  "random_sequence": "createkineticlift:blocks/control_seat"
 }

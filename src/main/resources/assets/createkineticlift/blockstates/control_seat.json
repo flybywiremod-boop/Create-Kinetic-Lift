@@ -1,0 +1,35 @@
+{
+  "variants": {
+    "facing=north,inverted=false": {
+      "model": "createkineticlift:block/control_seat"
+    },
+    "facing=east,inverted=false": {
+      "model": "createkineticlift:block/control_seat",
+      "y": 90
+    },
+    "facing=south,inverted=false": {
+      "model": "createkineticlift:block/control_seat",
+      "y": 180
+    },
+    "facing=west,inverted=false": {
+      "model": "createkineticlift:block/control_seat",
+      "y": 270
+    },
+
+    "facing=north,inverted=true": {
+      "model": "createkineticlift:block/inverted_control_seat"
+    },
+    "facing=east,inverted=true": {
+      "model": "createkineticlift:block/inverted_control_seat",
+      "y": 90
+    },
+    "facing=south,inverted=true": {
+      "model": "createkineticlift:block/inverted_control_seat",
+      "y": 180
+    },
+    "facing=west,inverted=true": {
+      "model": "createkineticlift:block/inverted_control_seat",
+      "y": 270
+    }
+  }
+}
