@@ -18,9 +18,9 @@
   "block.createkineticlift.turbofan_front.tooltip.condition2": "Information",
   "block.createkineticlift.turbofan_front.tooltip.behaviour2": "Connect it with _control seat_ to work.",
 
-  "item.createkinetilicft.headphones.tooltip.summary": "Connect the seat with Computer Cable.",
-  "item.createkinetilicft.headphones.tooltip.condition": "Connecting",
-  "item.createkinetilicft.headphones.tooltip.behaviour": "R-Click the seat, and you have main _input_. R-Click other blocks, and you have an _output_!",
+  "item.createkineticlift.red_cable.tooltip.summary": "Connect the seat with Computer Cable.",
+  "item.createkineticlift.red_cable.tooltip.condition1": "Connecting",
+  "item.createkineticlift.red_cable.tooltip.behaviour1": "R-Click the seat, and you have main _input_. R-Click other blocks, and you have an _output_!",
 
   "itemGroup.createkineticlift.create_tab": "Create: Kinetic Lift"
 }
