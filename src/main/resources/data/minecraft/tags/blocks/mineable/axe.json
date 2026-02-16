@@ -1,5 +1,6 @@
 {
   "values": [
-    "createkineticlift:control_chair"
+    "createkineticlift:control_seat",
+    "createkineticlift:inverted_control_seat"
   ]
 }

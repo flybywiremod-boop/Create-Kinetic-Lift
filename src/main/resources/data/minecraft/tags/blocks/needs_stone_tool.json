@@ -1,5 +1,7 @@
 {
   "values": [
+    "createkineticlift:control_seat",
+    "createkineticlift:inverted_control_seat"
     
   ]
 }
