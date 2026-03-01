@@ -17,7 +17,7 @@ import java.util.List;
 public class TurbofanBlockEntity extends SmartBlockEntity implements IHaveGoggleInformation, IHaveHoveringInformation {
 
     // to be changed
-    public static final int MAX_BLADES = 25;
+    public static final int MAX_BLADES = 18;
 
     protected TurbofanData turbofanData;
     protected final ItemStackHandler bladeInventory;

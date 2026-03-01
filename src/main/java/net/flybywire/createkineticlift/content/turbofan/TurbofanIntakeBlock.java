@@ -75,18 +75,18 @@ public class TurbofanIntakeBlock extends HorizontalDirectionalBlock implements I
                     if (!player.getAbilities().instabuild) {
                         heldItem.shrink(1);
                     }
-                    level.playSound(null, pos, SoundEvents.ANVIL_PLACE, SoundSource.BLOCKS, 0.3f, 1.5f);
+                    level.playSound(null, pos, SoundEvents.ARMOR_EQUIP_IRON, SoundSource.BLOCKS, 1.0f, 1.2f);
                 }
             }
             return InteractionResult.SUCCESS;
         }
 
-        if (heldItem.isEmpty() && player.isShiftKeyDown()) {
+        if (heldItem.isEmpty()) {
             if (!level.isClientSide) {
                 ItemStack removedBlade = turbofanBE.removeBlade();
                 if (!removedBlade.isEmpty()) {
                     player.getInventory().placeItemBackInInventory(removedBlade);
-                    level.playSound(null, pos, SoundEvents.ANVIL_PLACE, SoundSource.BLOCKS, 0.3f, 1.5f);
+                    level.playSound(null, pos, SoundEvents.ARMOR_EQUIP_IRON, SoundSource.BLOCKS, 1.0f, 1.0f);
                 }
             }
             return InteractionResult.SUCCESS;

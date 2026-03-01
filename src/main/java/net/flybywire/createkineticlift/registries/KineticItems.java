@@ -17,7 +17,7 @@ public class KineticItems {
 
     public static final ItemEntry<TurbofanBladeItem> IRON_BLADE = REGISTRATE.item("iron_blade", TurbofanBladeItem::new)
             .properties(p -> p
-                    .stacksTo(1)
+                    .stacksTo(64)
             )
             .register();
 
