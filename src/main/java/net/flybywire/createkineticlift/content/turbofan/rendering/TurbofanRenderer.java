@@ -52,7 +52,6 @@ public class TurbofanRenderer extends SmartBlockEntityRenderer<TurbofanBlockEnti
         // Blades
         int bladeCount = be.getBladeCount();
         if (bladeCount > 0) {
-            float angleStep = 360f / bladeCount;
 
             for (int i = 0; i < bladeCount; i++) {
 
@@ -73,7 +72,7 @@ public class TurbofanRenderer extends SmartBlockEntityRenderer<TurbofanBlockEnti
 
                 ms.translate(0f, 0.775f, 0f);
 
-                ms.mulPose(Axis.YP.rotationDegrees(10f));
+                ms.mulPose(Axis.YP.rotationDegrees(15f));
 
                 ms.translate(-0.5, -0.5, -0.5);
 
