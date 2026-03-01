@@ -87,8 +87,8 @@ public class TurbofanBlockEntity extends SmartBlockEntity implements IHaveGoggle
     }
 
     // Blades animation
-    public float[] prevBladeAngles = new float[18];
-    public float[] visualBladeAngles = new float[18];
+    public float[] prevBladeAngles = new float[MAX_BLADES];
+    public float[] visualBladeAngles = new float[MAX_BLADES];
 
     @Override
     public void tick() {
@@ -98,7 +98,7 @@ public class TurbofanBlockEntity extends SmartBlockEntity implements IHaveGoggle
             int count = getBladeCount();
             float angleStep = count > 0 ? 360f / count : 0;
 
-            for (int i = 0; i < 18; i++) {
+            for (int i = 0; i < MAX_BLADES; i++) {
                 prevBladeAngles[i] = visualBladeAngles[i];
 
                 if (i < count) {
