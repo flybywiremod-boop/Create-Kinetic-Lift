@@ -41,7 +41,6 @@ public class KineticBlocks {
                             .noOcclusion()
                     )
                     .blockstate(customHorizontalBlockStateGen("turbofan_intake_body"))
-                    .addLayer(() -> RenderType::cutout)
                     .simpleItem()
                     .register();
 
@@ -69,7 +68,6 @@ public class KineticBlocks {
                             .noOcclusion()
                     )
                     .blockstate(horizontalBlockStateGen())
-                    .addLayer(() -> RenderType::cutout)
                     .simpleItem()
                     .register();
 }
