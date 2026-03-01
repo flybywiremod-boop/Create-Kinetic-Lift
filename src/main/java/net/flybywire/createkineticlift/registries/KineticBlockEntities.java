@@ -9,7 +9,7 @@ import net.flybywire.createkineticlift.content.turbofan.rendering.TurbofanRender
 public class KineticBlockEntities {
 
     public static final CreateRegistrate REGISTRATE = CreateKineticLift.registrate();
-    public static void register() {};
+    public static void register() {}
 
     public static final BlockEntityEntry<TurbofanBlockEntity> TURBOFAN =
             REGISTRATE.blockEntity("turbofan", TurbofanBlockEntity::new)

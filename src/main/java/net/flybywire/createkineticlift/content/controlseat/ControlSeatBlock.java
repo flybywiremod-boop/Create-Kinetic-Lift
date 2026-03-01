@@ -5,7 +5,6 @@ import com.simibubi.create.AllSoundEvents;
 import com.simibubi.create.content.contraptions.actors.seat.SeatBlock;
 import com.simibubi.create.content.contraptions.actors.seat.SeatEntity;
 import com.simibubi.create.content.equipment.wrench.IWrenchable;
-import net.createmod.catnip.math.VoxelShaper;
 import net.flybywire.createkineticlift.registries.KineticEntities;
 import net.flybywire.createkineticlift.registries.KineticShapes;
 import net.minecraft.core.BlockPos;
@@ -33,7 +32,6 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.common.util.FakePlayer;
 
