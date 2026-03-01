@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "createkineticlift:block/turbofan_intake_body",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "createkineticlift:block/turbofan_intake_body"
+    },
+    "facing=south": {
+      "model": "createkineticlift:block/turbofan_intake_body",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "createkineticlift:block/turbofan_intake_body",
+      "y": 270
+    }
+  }
+}

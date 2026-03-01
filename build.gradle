@@ -65,6 +65,9 @@ minecraft {
             // example of overriding the workingDirectory set in configureEach above
             workingDirectory project.file('run-data')
 
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${project.projectDir}/build/createSrgToMcp/output.srg"
+
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
             args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
         }
@@ -135,7 +138,20 @@ dependencies {
     implementation 'thedarkcolour:kotlinforforge:4.11.0'
 }
 
-tasks.named('processResources', ProcessResources).configure {
+tasks.named('processResources', ProcessResources) {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    doLast {
+        def myLangFile = file("src/main/resources/assets/createkineticlift/lang/en_us.json")
+
+        def outputLangFile = file("${destinationDir}/assets/createkineticlift/lang/en_us.json")
+
+        if (myLangFile.exists()) {
+                outputLangFile.parentFile.mkdirs()
+                outputLangFile.text = myLangFile.text
+        }
+    }
+
     var replaceProperties = [
             minecraft_version: minecraft_version, minecraft_version_range: minecraft_version_range,
             forge_version: forge_version, forge_version_range: forge_version_range,

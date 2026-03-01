@@ -7,6 +7,7 @@ import com.simibubi.create.content.contraptions.actors.seat.SeatEntity;
 import com.simibubi.create.content.equipment.wrench.IWrenchable;
 import net.createmod.catnip.math.VoxelShaper;
 import net.flybywire.createkineticlift.registries.KineticEntities;
+import net.flybywire.createkineticlift.registries.KineticShapes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
@@ -167,34 +168,19 @@ public class ControlSeatBlock extends SeatBlock implements IWrenchable {
         return InteractionResult.SUCCESS;
     }
 
-    private static final VoxelShape SEAT = Shapes.or(
-            Block.box(6, 0, 4, 19, 5, 12),
-            Block.box(6, 5, 0, 19, 13, 16),
-            Block.box(0, 0, 0, 6, 16, 16)
-    );
-
-    private static final VoxelShape SEAT_INVERTED = Shapes.or(
-            Block.box(-3, 0, 4, 10, 5, 12),
-            Block.box(-3, 5, 0, 10, 13, 16),
-            Block.box(10, 0, 0, 16, 16, 16)
-    );
-
-    public static final VoxelShaper SHAPER = VoxelShaper.forHorizontal(SEAT, Direction.NORTH);
-    public static final VoxelShaper SHAPER_INVERTED = VoxelShaper.forHorizontal(SEAT_INVERTED, Direction.NORTH);
-
     @Override
-    public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-        if (pState.getValue(INVERTED)) {
-            return SHAPER_INVERTED.get(pState.getValue(FACING));
+    public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+        if (state.getValue(INVERTED)) {
+            return KineticShapes.INVERTED_CONTROL_SEAT.get(state.getValue(FACING));
         }
-        return SHAPER.get(pState.getValue(FACING));
+        return KineticShapes.CONTROL_SEAT.get(state.getValue(FACING));
     }
 
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         if (state.getValue(INVERTED)) {
-            return SHAPER_INVERTED.get(state.getValue(FACING));
+            return KineticShapes.INVERTED_CONTROL_SEAT.get(state.getValue(FACING));
         }
-        return SHAPER.get(state.getValue(FACING));
+        return KineticShapes.CONTROL_SEAT.get(state.getValue(FACING));
     }
 }

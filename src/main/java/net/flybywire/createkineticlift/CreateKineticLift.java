@@ -28,6 +28,7 @@ public class CreateKineticLift {
                     new ItemDescription.Modifier(item, FontHelper.Palette.STANDARD_CREATE)
                             .andThen(TooltipModifier.mapNull(KineticStats.create(item)))
             );
+    public static CreateRegistrate registrate() { return REGISTRATE; }
 
     public static final Logger LOGGER = LogUtils.getLogger();
 
@@ -39,7 +40,8 @@ public class CreateKineticLift {
         KineticBlocks.register();
         KineticItems.register();
         KineticEntities.register();
-        // KineticBlockEntities.register();
+        KineticBlockEntities.register();
+        KineticPartialModels.register();
 
         KineticCreativeTabs.register(modEventBus);
         modEventBus.addListener(this::commonSetup);

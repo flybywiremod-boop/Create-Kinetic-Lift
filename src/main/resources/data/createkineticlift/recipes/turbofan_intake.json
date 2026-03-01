@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "144",
+    "233",
+    "111"
+  ],
+  "key": {
+    "4": {
+      "item": "create:fluid_pipe"
+    },
+    "3": {
+      "item": "create:fluid_tank"
+    },
+    "2": {
+      "item": "create:propeller"
+    },
+    "1": {
+      "item": "create:iron_sheet"
+    }
+  },
+  "result": {
+    "count": 1,
+    "item": "createkineticlift:turbofan_intake"
+  }
+}

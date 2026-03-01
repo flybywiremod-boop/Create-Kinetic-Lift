@@ -1,0 +1,14 @@
+// 1.20.1	2026-03-01T15:48:08.93642	Registrate Provider for createkineticlift [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud)]
+8b04ffa6a0b98354dc30b17d91a6c7e501ed13de assets/createkineticlift/blockstates/control_seat.json
+136a6196cd2d3c37908061c87dd8ef1f20882230 assets/createkineticlift/blockstates/turbofan_exhaust.json
+7d40092d0868fa990fa93c1616986f698949d02f assets/createkineticlift/blockstates/turbofan_intake.json
+5da1d3b374359198310b79f2ca252a7a8368a18b assets/createkineticlift/lang/en_ud.json
+8af21dd8e6d89c79b4d6f69ffb1428b38427919b assets/createkineticlift/lang/en_us.json
+428bf6fc28ee028cb5fa8c0993e09aedabd5a7df assets/createkineticlift/models/item/control_seat.json
+17ac256c369ba470806e211e80fc189b067b22df assets/createkineticlift/models/item/iron_blade.json
+e41d57a0a73f2c63cf7fb56439809c470784e5d3 assets/createkineticlift/models/item/red_cable.json
+109bee5be53e4e42baa4e61de30e2d851025cd97 assets/createkineticlift/models/item/turbofan_exhaust.json
+e1ec632bef54b21a7ca511222880f2cee34efb5f assets/createkineticlift/models/item/turbofan_intake.json
+cb08abfb3be6317682d2be73dc34c4f9c909f103 data/createkineticlift/loot_tables/blocks/control_seat.json
+950d2307dd3db6c98526041d6fc9f78721853c96 data/createkineticlift/loot_tables/blocks/turbofan_exhaust.json
+e66d9188f47a6c1ef26c587d66ed688cec0a6719 data/createkineticlift/loot_tables/blocks/turbofan_intake.json

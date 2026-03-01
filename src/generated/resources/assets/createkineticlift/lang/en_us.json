@@ -1,0 +1,8 @@
+{
+  "block.createkineticlift.control_seat": "Control Seat",
+  "block.createkineticlift.turbofan_exhaust": "Turbofan Exhaust",
+  "block.createkineticlift.turbofan_intake": "Turbofan Intake",
+  "entity.createkineticlift.control_seat": "Control Seat",
+  "item.createkineticlift.iron_blade": "Iron Blade",
+  "item.createkineticlift.red_cable": "Red Cable"
+}

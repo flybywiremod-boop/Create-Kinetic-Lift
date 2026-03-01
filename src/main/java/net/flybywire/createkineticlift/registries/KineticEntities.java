@@ -25,7 +25,6 @@ public class KineticEntities {
             .renderer(() -> ControlSeatEntity.Render::new)
             .register();
 
-
     public static void register() {
     }
 }
