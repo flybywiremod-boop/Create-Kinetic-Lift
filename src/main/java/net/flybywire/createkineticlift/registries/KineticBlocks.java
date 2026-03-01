@@ -6,7 +6,6 @@ import net.flybywire.createkineticlift.CreateKineticLift;
 import net.flybywire.createkineticlift.content.controlseat.ControlSeatBlock;
 import net.flybywire.createkineticlift.content.turbofan.TurbofanExhaustBlock;
 import net.flybywire.createkineticlift.content.turbofan.TurbofanIntakeBlock;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.MapColor;
 import static net.flybywire.createkineticlift.foundation.KineticDatagen.*;
@@ -15,8 +14,6 @@ public class KineticBlocks {
 
     private static final CreateRegistrate REGISTRATE = CreateKineticLift.REGISTRATE;
     public static void register() {}
-
-
 
     public static final BlockEntry<ControlSeatBlock> CONTROL_SEAT =
             REGISTRATE.block("control_seat", ControlSeatBlock::new)
@@ -71,7 +68,3 @@ public class KineticBlocks {
                     .simpleItem()
                     .register();
 }
-
-
-
-
