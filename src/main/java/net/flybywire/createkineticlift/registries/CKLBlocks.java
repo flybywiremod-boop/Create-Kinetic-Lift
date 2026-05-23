@@ -1,18 +1,17 @@
 package net.flybywire.createkineticlift.registries;
 
-import com.simibubi.create.foundation.data.SharedProperties;
-
-import com.tterrag.registrate.util.entry.BlockEntry;
+import static com.simibubi.create.foundation.data.TagGen.axeOrPickaxe;
+import static net.flybywire.createkineticlift.CreateKineticLift.REGISTRATE;
 
 import net.flybywire.createkineticlift.content.controlseat.ControlSeatBlock;
 import net.flybywire.createkineticlift.foundation.datagen.CKLBlockStateGen;
 
+import com.simibubi.create.foundation.data.SharedProperties;
+import com.tterrag.registrate.util.entry.BlockEntry;
+
 import net.minecraft.tags.BlockTags;
 
-import static com.simibubi.create.foundation.data.TagGen.axeOrPickaxe;
-import static net.flybywire.createkineticlift.CreateKineticLift.REGISTRATE;
-
-public class KineticBlocks {
+public class CKLBlocks {
 
 	public static final BlockEntry<ControlSeatBlock> CONTROL_SEAT = REGISTRATE
 		.block("control_seat", ControlSeatBlock::new)

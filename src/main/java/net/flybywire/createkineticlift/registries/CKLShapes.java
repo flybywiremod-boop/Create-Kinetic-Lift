@@ -1,5 +1,7 @@
 package net.flybywire.createkineticlift.registries;
 
+import java.util.function.BiFunction;
+
 import net.createmod.catnip.math.VoxelShaper;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.Block;
@@ -7,69 +9,65 @@ import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import java.util.function.BiFunction;
 
-import static net.minecraft.core.Direction.NORTH;
-
-
-public class KineticShapes {
+public class CKLShapes {
 
 	public static final VoxelShaper
 		CONTROL_SEAT = shape(6, 0, 4, 19, 5, 12)
-			.add(6, 5, 0, 19, 13, 16)
-			.add(0, 0, 0, 6, 16, 16)
-			.forHorizontal(Direction.NORTH),
+		.add(6, 5, 0, 19, 13, 16)
+		.add(0, 0, 0, 6, 16, 16)
+		.forHorizontal(Direction.NORTH),
 
-		INVERTED_CONTROL_SEAT = shape(-3, 0, 4, 10, 5, 12)
-			.add(-3, 5, 0, 10, 13, 16)
-			.add(10, 0, 0, 16, 16, 16)
-			.forHorizontal(Direction.NORTH),
+	INVERTED_CONTROL_SEAT = shape(-3, 0, 4, 10, 5, 12)
+		.add(-3, 5, 0, 10, 13, 16)
+		.add(10, 0, 0, 16, 16, 16)
+		.forHorizontal(Direction.NORTH),
 
-		TURBOFAN_STRUCTURAL_TOP_LEFT = shape(7, 7, 0, 13, 13, 16)
-			.add(0, 0, 0, 7, 15, 16)
-			.add(7, 0, 0, 15, 7, 16)
-			.forHorizontal(Direction.NORTH),
+	TURBOFAN_STRUCTURAL_TOP_LEFT = shape(7, 7, 0, 13, 13, 16)
+		.add(0, 0, 0, 7, 15, 16)
+		.add(7, 0, 0, 15, 7, 16)
+		.forHorizontal(Direction.NORTH),
 
-		TURBOFAN_STRUCTURAL_TOP_RIGHT = shape(3, 7, 0, 9, 13, 16)
-			.add(9, 0, 0, 16, 15, 16)
-			.add(1, 0, 0, 9, 7, 16)
-			.forHorizontal(Direction.NORTH),
+	TURBOFAN_STRUCTURAL_TOP_RIGHT = shape(3, 7, 0, 9, 13, 16)
+		.add(9, 0, 0, 16, 15, 16)
+		.add(1, 0, 0, 9, 7, 16)
+		.forHorizontal(Direction.NORTH),
 
-		TURBOFAN_STRUCTURAL_BOTTOM_LEFT = shape(7, 3, 0, 13, 9, 16)
-			.add(0, 1, 0, 7, 16, 16)
-			.add(7, 9, 0, 15, 16, 16)
-			.forHorizontal(Direction.NORTH),
+	TURBOFAN_STRUCTURAL_BOTTOM_LEFT = shape(7, 3, 0, 13, 9, 16)
+		.add(0, 1, 0, 7, 16, 16)
+		.add(7, 9, 0, 15, 16, 16)
+		.forHorizontal(Direction.NORTH),
 
-		TURBOFAN_STRUCTURAL_BOTTOM_RIGHT = shape(3, 3, 0, 9, 9, 16)
-			.add(9, 1, 0, 16, 16, 16)
-			.add(1, 9, 0, 9, 16, 16)
-			.forHorizontal(Direction.NORTH),
+	TURBOFAN_STRUCTURAL_BOTTOM_RIGHT = shape(3, 3, 0, 9, 9, 16)
+		.add(9, 1, 0, 16, 16, 16)
+		.add(1, 9, 0, 9, 16, 16)
+		.forHorizontal(Direction.NORTH),
 
-		TURBOFAN_STRUCTURAL_TOP_LEFT_CUT = shape(7, 7, 8, 13, 13, 16)
-			.add(0, 0, 8, 7, 15, 16)
-			.add(7, 0, 8, 15, 7, 16)
-			.forHorizontal(Direction.NORTH),
+	TURBOFAN_STRUCTURAL_TOP_LEFT_CUT = shape(7, 7, 8, 13, 13, 16)
+		.add(0, 0, 8, 7, 15, 16)
+		.add(7, 0, 8, 15, 7, 16)
+		.forHorizontal(Direction.NORTH),
 
-		TURBOFAN_STRUCTURAL_TOP_RIGHT_CUT = shape(3, 7, 8, 9, 13, 16)
-			.add(9, 0, 8, 16, 15, 16)
-			.add(1, 0, 8, 9, 7, 16)
-			.forHorizontal(Direction.NORTH),
+	TURBOFAN_STRUCTURAL_TOP_RIGHT_CUT = shape(3, 7, 8, 9, 13, 16)
+		.add(9, 0, 8, 16, 15, 16)
+		.add(1, 0, 8, 9, 7, 16)
+		.forHorizontal(Direction.NORTH),
 
-		TURBOFAN_STRUCTURAL_BOTTOM_LEFT_CUT = shape(7, 3, 8, 13, 9, 16)
-			.add(0, 1, 8, 7, 16, 16)
-			.add(7, 9, 8, 15, 16, 16)
-			.forHorizontal(Direction.NORTH),
+	TURBOFAN_STRUCTURAL_BOTTOM_LEFT_CUT = shape(7, 3, 8, 13, 9, 16)
+		.add(0, 1, 8, 7, 16, 16)
+		.add(7, 9, 8, 15, 16, 16)
+		.forHorizontal(Direction.NORTH),
 
-		TURBOFAN_STRUCTURAL_BOTTOM_RIGHT_CUT = shape(3, 3, 8, 9, 9, 16)
-			.add(9, 1, 8, 16, 16, 16)
-			.add(1, 9, 8, 9, 16, 16)
-			.forHorizontal(Direction.NORTH),
+	TURBOFAN_STRUCTURAL_BOTTOM_RIGHT_CUT = shape(3, 3, 8, 9, 9, 16)
+		.add(9, 1, 8, 16, 16, 16)
+		.add(1, 9, 8, 9, 16, 16)
+		.forHorizontal(Direction.NORTH),
 
-		TURBOFAN_STRUCTURAL_SIDE_CUT = shape(0, 0, 8, 16, 16, 16)
-			.forHorizontal(Direction.NORTH);
+	TURBOFAN_STRUCTURAL_SIDE_CUT = shape(0, 0, 8, 16, 16, 16)
+		.forHorizontal(Direction.NORTH);
 
 	// public static final VoxelShape
-		;
+	;
 
 	private static Builder shape(final VoxelShape shape) {
 		return new Builder(shape);

@@ -2,11 +2,11 @@ package net.flybywire.createkineticlift;
 
 import org.slf4j.Logger;
 
-import net.flybywire.createkineticlift.registries.KineticBlockEntityTypes;
-import net.flybywire.createkineticlift.registries.KineticBlocks;
-import net.flybywire.createkineticlift.registries.KineticCreativeTabs;
-import net.flybywire.createkineticlift.registries.KineticFluids;
-import net.flybywire.createkineticlift.registries.KineticItems;
+import net.flybywire.createkineticlift.registries.CKLBlockEntityTypes;
+import net.flybywire.createkineticlift.registries.CKLBlocks;
+import net.flybywire.createkineticlift.registries.CKLCreativeTabs;
+import net.flybywire.createkineticlift.registries.CKLFluids;
+import net.flybywire.createkineticlift.registries.CKLItems;
 
 import com.mojang.logging.LogUtils;
 import com.simibubi.create.foundation.data.CreateRegistrate;
@@ -38,10 +38,10 @@ public class CreateKineticLift {
 		REGISTRATE.defaultCreativeTab((ResourceKey<CreativeModeTab>) null);
 		REGISTRATE.registerEventListeners(modEventBus);
 
-		KineticItems.register();
-		KineticBlocks.register();
-		KineticFluids.register();
-		KineticBlockEntityTypes.register();
-		KineticCreativeTabs.register(modEventBus);
+		CKLItems.register();
+		CKLBlocks.register();
+		CKLFluids.register();
+		CKLBlockEntityTypes.register();
+		CKLCreativeTabs.register(modEventBus);
 	}
 }
