@@ -1,0 +1,28 @@
+package net.flybywire.createkineticlift.registries;
+
+import net.flybywire.createkineticlift.CreateKineticLift;
+
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.CreativeModeTab;
+
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredRegister;
+
+public class KineticCreativeTabs {
+	private static final DeferredRegister<CreativeModeTab> TAB_REGISTER =
+		DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CreateKineticLift.MOD_ID);
+	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CREATIVE_TAB = TAB_REGISTER.register("ckl_creative_tab",
+		() -> CreativeModeTab.builder()
+			.title(Component.translatable("itemGroup.createkineticlift.creative_tab"))
+			.icon(KineticBlocks.CONTROL_SEAT::asStack)
+			.displayItems((parameters, output) -> {
+				output.accept(KineticBlocks.CONTROL_SEAT.get());
+			})
+			.build());
+
+	public static void register(IEventBus modEventBus) {
+		TAB_REGISTER.register(modEventBus);
+	}
+}
