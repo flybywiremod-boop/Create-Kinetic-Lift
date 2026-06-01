@@ -10,7 +10,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-public class CKLCreativeTabs {
+public class CKLCreativeTab {
 	private static final DeferredRegister<CreativeModeTab> TAB_REGISTER =
 		DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CreateKineticLift.MOD_ID);
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CREATIVE_TAB = TAB_REGISTER.register("ckl_creative_tab",
@@ -19,6 +19,9 @@ public class CKLCreativeTabs {
 			.icon(CKLBlocks.CONTROL_SEAT::asStack)
 			.displayItems((parameters, output) -> {
 				output.accept(CKLBlocks.CONTROL_SEAT.get());
+				output.accept(CKLBlocks.TURBOFAN_INTAKE.get());
+				output.accept(CKLItems.IRON_BLADE.get());
+				output.accept(CKLItems.RED_CABLE.get());
 			})
 			.build());
 

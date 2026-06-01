@@ -124,7 +124,7 @@ tasks.named('processResources', Copy) {
 }
 
 tasks.register("cleanGenerated", Delete) {
-    delete("src/generated")
+    delete("src/generated/resources/assets/createkineticlift/lang")
 }
 
 tasks.named("runData") {

@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 
 import net.flybywire.createkineticlift.registries.CKLBlockEntityTypes;
 import net.flybywire.createkineticlift.registries.CKLBlocks;
-import net.flybywire.createkineticlift.registries.CKLCreativeTabs;
+import net.flybywire.createkineticlift.registries.CKLCreativeTab;
 import net.flybywire.createkineticlift.registries.CKLFluids;
 import net.flybywire.createkineticlift.registries.CKLItems;
 
@@ -42,6 +42,6 @@ public class CreateKineticLift {
 		CKLBlocks.register();
 		CKLFluids.register();
 		CKLBlockEntityTypes.register();
-		CKLCreativeTabs.register(modEventBus);
+		CKLCreativeTab.register(modEventBus);
 	}
 }
