@@ -20,9 +20,11 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
@@ -54,13 +56,29 @@ public class TurbofanStructuralBlock extends HorizontalDirectionalBlock implemen
 	}
 
 	@Override
-	public RenderShape getRenderShape(BlockState pState) {
+	public RenderShape getRenderShape(BlockState state) {
 		return RenderShape.INVISIBLE;
 	}
 
 	@Override
-	public PushReaction getPistonPushReaction(BlockState pState) {
+	public PushReaction getPistonPushReaction(BlockState state) {
 		return PushReaction.BLOCK;
+	}
+
+	@Override
+	public InteractionResult onSneakWrenched(BlockState state, UseOnContext context) {
+		BlockPos clickedPos = context.getClickedPos();
+		Level level = context.getLevel();
+
+		if (stillValid(level, clickedPos, state)) {
+			BlockPos corePos = getCorePos(level, clickedPos);
+			context = new UseOnContext(level, context.getPlayer(), context.getHand(), context.getItemInHand(),
+				new BlockHitResult(context.getClickLocation(), context.getClickedFace(), corePos,
+					context.isInside()));
+			state = level.getBlockState(corePos);
+		}
+
+		return IWrenchable.super.onSneakWrenched(state, context);
 	}
 
 	@Override
