@@ -1,6 +1,7 @@
 {
   "values": [
     "createkineticlift:turbofan_intake",
+    "createkineticlift:turbofan_exhaust",
     "createkineticlift:turbofan_structure"
   ]
 }

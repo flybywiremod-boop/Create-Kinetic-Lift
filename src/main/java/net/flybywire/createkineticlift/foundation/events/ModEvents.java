@@ -2,12 +2,12 @@ package net.flybywire.createkineticlift.foundation.events;
 
 import java.util.Map;
 
+import net.flybywire.createkineticlift.CreateKineticLift;
+
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.simibubi.create.foundation.utility.FilesHelper;
 import com.tterrag.registrate.providers.ProviderType;
-
-import net.flybywire.createkineticlift.CreateKineticLift;
 
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -28,4 +28,6 @@ public class ModEvents {
 				provider.add(entry.getKey(), entry.getValue().getAsString());
 		});
 	}
+
+
 }

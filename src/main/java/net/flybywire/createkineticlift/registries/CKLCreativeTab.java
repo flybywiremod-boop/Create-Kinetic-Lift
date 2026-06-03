@@ -20,6 +20,7 @@ public class CKLCreativeTab {
 			.displayItems((parameters, output) -> {
 				output.accept(CKLBlocks.CONTROL_SEAT.get());
 				output.accept(CKLBlocks.TURBOFAN_INTAKE.get());
+				output.accept(CKLBlocks.TURBOFAN_EXHAUST.get());
 				output.accept(CKLItems.IRON_BLADE.get());
 				output.accept(CKLItems.RED_CABLE.get());
 			})

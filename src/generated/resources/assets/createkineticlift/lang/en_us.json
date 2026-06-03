@@ -5,6 +5,7 @@
   "block.createkineticlift.control_seat.tooltip.condition1": "When R-Clicked",
   "block.createkineticlift.control_seat.tooltip.condition2": "When R-Clicked with wrench",
   "block.createkineticlift.control_seat.tooltip.summary": "When seated a _GUI will appear on your screen_ that gives you _information_.",
+  "block.createkineticlift.turbofan_exhaust": "Turbofan Exhaust",
   "block.createkineticlift.turbofan_intake": "Turbofan Intake",
   "block.createkineticlift.turbofan_intake.tooltip.behaviour1": "For assembly you need to put _exhaust_ to make it work.",
   "block.createkineticlift.turbofan_intake.tooltip.behaviour2": "Connect it with _control seat_ to work.",

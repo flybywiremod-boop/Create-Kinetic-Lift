@@ -1,4 +1,4 @@
-package net.flybywire.createkineticlift.foundation.datagen;
+package net.flybywire.createkineticlift.foundation.data;
 
 import net.flybywire.createkineticlift.content.controlseat.ControlSeatBlock;
 
