@@ -1,6 +1,24 @@
+# License Overview
+
+## Assets License (All Rights Reserved)
+
+All Rights Reserved
+
+Copyright (c) The Kinetic Team / The Creators of Kinetic Lift
+
+This license applies to any files under the following directories:
+
+- ./src/main/resources/assets/
+
+---
+
+## Code License (MIT)
+
+All other files are licensed under the MIT License:
+
 MIT License
 
-Copyright (c) 2026 Fly-By-Wire
+Copyright (c) The Kinetic Team / The Creators of Kinetic Lift
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
