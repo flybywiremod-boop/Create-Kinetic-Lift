@@ -1,0 +1,26 @@
+{
+  "values": [
+    "createkineticlift:flowing_kerosene",
+    "createkineticlift:kerosene",
+    {
+      "id": "tfmg:kerosene",
+      "required": false
+    },
+    {
+      "id": "tfmg:diesel",
+      "required": false
+    },
+    {
+      "id": "createdieselgenerators:diesel",
+      "required": false
+    },
+    {
+      "id": "createdieselgenerators:biodiesel",
+      "required": false
+    },
+    {
+      "id": "createpropulsion:turpentine",
+      "required": false
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 {
   "values": [
     "createkineticlift:control_seat",
-    "createkineticlift:turbofan_intake",
-    "createkineticlift:turbofan_exhaust",
+    "createkineticlift:regular_turbofan_intake",
+    "createkineticlift:regular_turbofan_exhaust",
     "createkineticlift:turbofan_structure"
   ]
 }

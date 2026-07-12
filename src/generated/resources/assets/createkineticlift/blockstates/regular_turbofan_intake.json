@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "assembled=false,facing=east": {
+      "model": "createkineticlift:block/regular_turbofan_intake_body",
+      "y": 90
+    },
+    "assembled=false,facing=north": {
+      "model": "createkineticlift:block/regular_turbofan_intake_body"
+    },
+    "assembled=false,facing=south": {
+      "model": "createkineticlift:block/regular_turbofan_intake_body",
+      "y": 180
+    },
+    "assembled=false,facing=west": {
+      "model": "createkineticlift:block/regular_turbofan_intake_body",
+      "y": 270
+    },
+    "assembled=true,facing=east": {
+      "model": "createkineticlift:block/regular_turbofan_intake_body",
+      "y": 90
+    },
+    "assembled=true,facing=north": {
+      "model": "createkineticlift:block/regular_turbofan_intake_body"
+    },
+    "assembled=true,facing=south": {
+      "model": "createkineticlift:block/regular_turbofan_intake_body",
+      "y": 180
+    },
+    "assembled=true,facing=west": {
+      "model": "createkineticlift:block/regular_turbofan_intake_body",
+      "y": 270
+    }
+  }
+}

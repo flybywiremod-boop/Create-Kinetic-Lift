@@ -2,6 +2,8 @@ package net.flybywire.createkineticlift.content.controlseat;
 
 import java.util.List;
 
+import net.flybywire.createkineticlift.avionics.IAvionicsActorProvider;
+import net.flybywire.createkineticlift.registries.CKLBlockEntityTypes;
 import net.flybywire.createkineticlift.registries.CKLShapes;
 
 import com.simibubi.create.AllBlocks;
@@ -9,8 +11,8 @@ import com.simibubi.create.AllItems;
 import com.simibubi.create.AllSoundEvents;
 import com.simibubi.create.Create;
 import com.simibubi.create.content.contraptions.actors.seat.SeatBlock;
-import com.simibubi.create.content.contraptions.actors.seat.SeatEntity;
 import com.simibubi.create.content.equipment.wrench.IWrenchable;
+import com.simibubi.create.foundation.block.IBE;
 import com.simibubi.create.foundation.utility.BlockHelper;
 
 import net.minecraft.core.BlockPos;
@@ -30,6 +32,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition.Builder;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -43,7 +46,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import net.neoforged.neoforge.common.util.FakePlayer;
 
-public class ControlSeatBlock extends SeatBlock implements IWrenchable {
+public class ControlSeatBlock extends SeatBlock implements IWrenchable, IAvionicsActorProvider, IBE<ControlSeatBlockEntity> {
 
 	public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 	public static final BooleanProperty INVERTED = BooleanProperty.create("inverted");
@@ -87,12 +90,6 @@ public class ControlSeatBlock extends SeatBlock implements IWrenchable {
 	}
 
 	@Override
-	public void updateEntityAfterFallOn(BlockGetter level, Entity entity) {
-		entity.setDeltaMovement(entity.getDeltaMovement().multiply((double) 1.0F, (double) 0.0F, (double) 1.0F));
-		entity.setDeltaMovement(entity.getDeltaMovement().multiply((double) 1.0F, (double) 0.0F, (double) 1.0F));
-	}
-
-	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
 		if (state.getValue(INVERTED)) {
 			return CKLShapes.INVERTED_CONTROL_SEAT.get(state.getValue(FACING));
@@ -125,9 +122,9 @@ public class ControlSeatBlock extends SeatBlock implements IWrenchable {
 			return ItemInteractionResult.SUCCESS;
 		}
 
-		List<SeatEntity> seats = level.getEntitiesOfClass(SeatEntity.class, new AABB(pos));
+		List<ControlSeatEntity> seats = level.getEntitiesOfClass(ControlSeatEntity.class, new AABB(pos));
 		if (!seats.isEmpty()) {
-			SeatEntity seatEntity = seats.get(0);
+			ControlSeatEntity seatEntity = seats.get(0);
 			List<Entity> passengers = seatEntity.getPassengers();
 			if (!passengers.isEmpty() && passengers.get(0) instanceof Player)
 				return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
@@ -147,6 +144,7 @@ public class ControlSeatBlock extends SeatBlock implements IWrenchable {
 	public static void sitDown(BlockState state, Level level, BlockPos pos, Entity entity) {
 		if (level.isClientSide)
 			return;
+
 		Boolean inverted = state.getValue(INVERTED);
 		Direction direction = state.getValue(FACING);
 		Direction lateral = inverted ? direction.getCounterClockWise() : direction.getClockWise();
@@ -155,10 +153,11 @@ public class ControlSeatBlock extends SeatBlock implements IWrenchable {
 			.relative(lateral, 0.28125)
 			.relative(Direction.DOWN, 0.1875);
 
-		SeatEntity seat = new SeatEntity(level);
+		ControlSeatEntity seat = new ControlSeatEntity(level, pos);
 		seat.setPos(entityPos.x, entityPos.y, entityPos.z);
 		level.addFreshEntity(seat);
 		entity.startRiding(seat, true);
+
 		if (entity instanceof TamableAnimal ta)
 			ta.setInSittingPose(true);
 	}
@@ -171,11 +170,21 @@ public class ControlSeatBlock extends SeatBlock implements IWrenchable {
 		level.setBlock(pos, state.cycle(INVERTED), Block.UPDATE_ALL);
 		AllSoundEvents.WRENCH_ROTATE.playOnServer(level, pos, 1, Create.RANDOM.nextFloat() + .5f);
 
-		List<SeatEntity> seats = level.getEntitiesOfClass(SeatEntity.class, new AABB(pos));
+		List<ControlSeatEntity> seats = level.getEntitiesOfClass(ControlSeatEntity.class, new AABB(pos));
 		if (!seats.isEmpty()) {
-			SeatEntity seatEntity = seats.get(0);
+			ControlSeatEntity seatEntity = seats.get(0);
 			seatEntity.discard();
 		}
 		return InteractionResult.SUCCESS;
+	}
+
+	@Override
+	public Class<ControlSeatBlockEntity> getBlockEntityClass() {
+		return ControlSeatBlockEntity.class;
+	}
+
+	@Override
+	public BlockEntityType<? extends ControlSeatBlockEntity> getBlockEntityType() {
+		return CKLBlockEntityTypes.CONTROL_SEAT.get();
 	}
 }

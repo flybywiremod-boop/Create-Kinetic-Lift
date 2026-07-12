@@ -23,63 +23,125 @@ public class CKLShapes {
 
 	INVERTED_CONTROL_SEAT =
 		shape(-3, 0, 4, 10, 5, 12)
-			.add(2, 5, 0, 10, 13, 16)
-			.add(2, 5, 0, 5, 13, 13)
+			.add(5, 5, 0, 10, 13, 16)
+			.add(2, 5, 3, 5, 13, 16)
 			.add(-3, 5, 0, 2, 13, 16)
 			.add(10, 0, 0, 16, 15, 16)
 			.forHorizontal(Direction.NORTH),
 
-	TURBOFAN_STRUCTURAL_TOP_LEFT =
-		shape(7, 7, 0, 13, 13, 16)
-			.add(0, 0, 0, 7, 15, 16)
-			.add(7, 0, 0, 15, 7, 16)
+
+	TURBOFAN_STRUCTURAL_INTAKE =
+		shape(0, 0, 0, 16, 16, 16)
 			.forHorizontal(Direction.NORTH),
 
-	TURBOFAN_STRUCTURAL_TOP_RIGHT =
-		shape(3, 7, 0, 9, 13, 16)
-			.add(9, 0, 0, 16, 15, 16)
-			.add(1, 0, 0, 9, 7, 16)
+	TURBOFAN_STRUCTURAL_INTAKE_TOP_LEFT =
+		shape(0, 0, 0, 15, 6, 16)
+			.add(0, 6, 0, 10, 10, 16)
+			.add(0, 10, 0, 6, 15, 16)
 			.forHorizontal(Direction.NORTH),
 
-	TURBOFAN_STRUCTURAL_BOTTOM_LEFT =
-		shape(7, 3, 0, 13, 9, 16)
-			.add(0, 1, 0, 7, 16, 16)
-			.add(7, 9, 0, 15, 16, 16)
+	TURBOFAN_STRUCTURAL_INTAKE_TOP_RIGHT =
+		shape(1, 0, 0, 16, 6, 16)
+			.add(6, 6, 0, 16, 10, 16)
+			.add(10, 10, 0, 16, 15, 16)
 			.forHorizontal(Direction.NORTH),
 
-	TURBOFAN_STRUCTURAL_BOTTOM_RIGHT =
-		shape(3, 3, 0, 9, 9, 16)
-			.add(9, 1, 0, 16, 16, 16)
-			.add(1, 9, 0, 9, 16, 16)
+	TURBOFAN_STRUCTURAL_INTAKE_BOTTOM_LEFT =
+		shape(0, 1, 0, 6, 6, 16)
+			.add(0, 6, 0, 10, 10, 16)
+			.add(0, 10, 0, 15, 15, 16)
 			.forHorizontal(Direction.NORTH),
 
-	TURBOFAN_STRUCTURAL_TOP_LEFT_CUT =
-		shape(7, 7, 8, 13, 13, 16)
-			.add(0, 0, 8, 7, 15, 16)
-			.add(7, 0, 8, 15, 7, 16)
+	TURBOFAN_STRUCTURAL_INTAKE_BOTTOM_RIGHT =
+		shape(10, 1, 0, 16, 6, 16)
+			.add(6, 6, 0, 16, 10, 16)
+			.add(1, 10, 0, 16, 15, 16)
 			.forHorizontal(Direction.NORTH),
 
-	TURBOFAN_STRUCTURAL_TOP_RIGHT_CUT =
-		shape(3, 7, 8, 9, 13, 16)
-			.add(9, 0, 8, 16, 15, 16)
-			.add(1, 0, 8, 9, 7, 16)
+	TURBOFAN_STRUCTURAL_INTAKE_CUT =
+		shape(0, 0, 4, 16, 16, 16)
 			.forHorizontal(Direction.NORTH),
 
-	TURBOFAN_STRUCTURAL_BOTTOM_LEFT_CUT =
-		shape(7, 3, 8, 13, 9, 16)
-			.add(0, 1, 8, 7, 16, 16)
-			.add(7, 9, 8, 15, 16, 16)
+	TURBOFAN_STRUCTURAL_INTAKE_TOP_LEFT_CUT =
+		shape(0, 0, 4, 15, 6, 16)
+			.add(0, 6, 4, 10, 10, 16)
+			.add(0, 10, 4, 6, 15, 16)
 			.forHorizontal(Direction.NORTH),
 
-	TURBOFAN_STRUCTURAL_BOTTOM_RIGHT_CUT =
-		shape(3, 3, 8, 9, 9, 16)
-			.add(9, 1, 8, 16, 16, 16)
-			.add(1, 9, 8, 9, 16, 16)
+	TURBOFAN_STRUCTURAL_INTAKE_TOP_RIGHT_CUT =
+		shape(1, 0, 4, 16, 6, 16)
+			.add(6, 6, 4, 16, 10, 16)
+			.add(10, 10, 4, 16, 15, 16)
 			.forHorizontal(Direction.NORTH),
 
-	TURBOFAN_STRUCTURAL_SIDE_CUT =
-		shape(0, 0, 8, 16, 16, 16)
+	TURBOFAN_STRUCTURAL_INTAKE_BOTTOM_LEFT_CUT =
+		shape(0, 1, 4, 6, 6, 16)
+			.add(0, 6, 4, 10, 10, 16)
+			.add(0, 10, 4, 15, 15, 16)
+			.forHorizontal(Direction.NORTH),
+
+	TURBOFAN_STRUCTURAL_INTAKE_BOTTOM_RIGHT_CUT =
+		shape(10, 1, 4, 16, 6, 16)
+			.add(6, 6, 4, 16, 10, 16)
+			.add(1, 10, 4, 16, 15, 16)
+			.forHorizontal(Direction.NORTH),
+
+
+	TURBOFAN_EXHAUST =
+		shape(1, 1, 0, 15, 15, 10)
+			.add(0, 0, 10, 16, 16, 16)
+			.forHorizontal(Direction.NORTH),
+
+	TURBOFAN_STRUCTURAL_EXHAUST_TIP =
+		shape(3, 3, 6, 13, 13, 13)
+			.add(1, 1, 13, 15, 15, 16)
+			.forHorizontal(Direction.NORTH),
+
+	TURBOFAN_STRUCTURAL_EXHAUST_TOP =
+		shape(0, 0, 2, 16, 15, 16)
+			.forHorizontal(Direction.NORTH),
+
+	TURBOFAN_STRUCTURAL_EXHAUST_BOTTOM =
+		shape(0, 1, 2, 16, 16, 16)
+			.forHorizontal(Direction.NORTH),
+
+	TURBOFAN_STRUCTURAL_EXHAUST_LEFT =
+		shape(0, 0, 2, 15, 16, 16)
+			.forHorizontal(Direction.NORTH),
+
+	TURBOFAN_STRUCTURAL_EXHAUST_RIGHT =
+		shape(1, 0, 2, 16, 16, 16)
+			.forHorizontal(Direction.NORTH),
+
+	TURBOFAN_STRUCTURAL_EXHAUST_TOP_LEFT =
+		shape(0, 0, 2, 14, 6, 16)
+			.add(0, 6, 2, 9, 9, 16)
+			.add(0, 9, 2, 6, 14, 16)
+			.forHorizontal(Direction.NORTH),
+
+	TURBOFAN_STRUCTURAL_EXHAUST_TOP_RIGHT =
+		shape(2, 0, 2, 16, 6, 16)
+			.add(7, 6, 2, 16, 9, 16)
+			.add(10, 9, 2, 16, 14, 16)
+			.forHorizontal(Direction.NORTH),
+
+	TURBOFAN_STRUCTURAL_EXHAUST_BOTTOM_LEFT =
+		shape(0, 10, 2, 14, 16, 16)
+			.add(0, 7, 2, 9, 10, 16)
+			.add(0, 2, 2, 6, 7, 16)
+			.forHorizontal(Direction.NORTH),
+
+	TURBOFAN_STRUCTURAL_EXHAUST_BOTTOM_RIGHT =
+		shape(2, 10, 2, 16, 16, 16)
+			.add(7, 7, 2, 16, 10, 16)
+			.add(10, 2, 2, 16, 7, 16)
+			.forHorizontal(Direction.NORTH),
+
+
+	LANDING_GEAR_MOUNT =
+		shape(6, 15, 11, 10, 16, 15)
 			.forHorizontal(Direction.NORTH);
+
 
 	private static Builder shape(final VoxelShape shape) {
 		return new Builder(shape);

@@ -1,0 +1,12 @@
+{
+  "turbofan_loop": {
+    "sounds": [
+      {
+        "type": "file",
+        "attenuation_distance": 64,
+        "name": "createkineticlift:turbofan_loop"
+      }
+    ],
+    "subtitle": "createkineticlift.subtitle.turbofan_loop"
+  }
+}

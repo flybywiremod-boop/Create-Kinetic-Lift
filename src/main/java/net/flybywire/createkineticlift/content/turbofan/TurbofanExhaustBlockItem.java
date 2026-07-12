@@ -31,8 +31,7 @@ public class TurbofanExhaustBlockItem extends BlockItem {
 			? context.getClickedPos().relative(clickedFace)
 			: context.getClickedPos().relative(clickedFace).relative(direction);
 		InteractionResult result = super.place(BlockPlaceContext.at(context, targetPos, clickedFace));
-		if (result == InteractionResult.FAIL && context.getLevel()
-			.isClientSide())
+		if (result == InteractionResult.FAIL && context.getLevel().isClientSide())
 			CatnipServices.PLATFORM.executeOnClientOnly(() -> () -> showBounds(context));
 		return result;
 	}

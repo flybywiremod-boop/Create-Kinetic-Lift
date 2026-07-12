@@ -1,0 +1,154 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "createkineticlift:item/computer_cable_connectors",
+		"1": "createkineticlift:item/computer_cable",
+		"particle": "createkineticlift:item/computer_cable_connectors"
+	},
+	"elements": [
+		{
+			"name": "cable",
+			"from": [12, 0, 2],
+			"to": [16, 4, 8],
+			"rotation": {"angle": 0, "axis": "y", "origin": [15, 0.75, 7.5]},
+			"faces": {
+				"north": {"uv": [3, 0, 5, 2], "texture": "#0"},
+				"east": {"uv": [0, 2, 3, 0], "texture": "#0"},
+				"south": {"uv": [3, 0, 5, 2], "texture": "#0"},
+				"west": {"uv": [3, 0, 0, 2], "texture": "#0"},
+				"up": {"uv": [3, 2, 0, 0], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [3, 2, 0, 0], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "cable",
+			"from": [0, 0, 2],
+			"to": [4, 4, 8],
+			"rotation": {"angle": 0, "axis": "y", "origin": [3, 0.75, 7.5]},
+			"faces": {
+				"north": {"uv": [10, 0, 12, 2], "texture": "#0"},
+				"east": {"uv": [0, 2, 3, 0], "texture": "#0"},
+				"south": {"uv": [3, 0, 5, 2], "texture": "#0"},
+				"west": {"uv": [0, 2, 3, 0], "rotation": 180, "texture": "#0"},
+				"up": {"uv": [3, 2, 0, 0], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [3, 2, 0, 0], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "input",
+			"from": [12.25, 0.25, 0],
+			"to": [15.75, 3.75, 2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [14, 0, 0]},
+			"faces": {
+				"north": {"uv": [8, 0, 10, 2], "texture": "#0"},
+				"east": {"uv": [5, 0, 6, 2], "texture": "#0"},
+				"south": {"uv": [0, 8, 2, 10], "texture": "#0"},
+				"west": {"uv": [6, 0, 5, 2], "texture": "#0"},
+				"up": {"uv": [6, 2, 5, 0], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [5, 0, 6, 2], "rotation": 90, "texture": "#0"}
+			}
+		},
+		{
+			"name": "wires",
+			"from": [12.85133, 1.004, 7.77152],
+			"to": [14.84733, 3, 11.76752],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [14.34933, 1.502, 8.26952]},
+			"faces": {
+				"north": {"uv": [1.5, 3, 2, 3.5], "texture": "#1"},
+				"east": {"uv": [0, 2.5, 2, 3.5], "texture": "#1"},
+				"south": {"uv": [2, 2.5, 1.5, 3], "texture": "#1"},
+				"west": {"uv": [0, 2.5, 2, 3.5], "texture": "#1"},
+				"up": {"uv": [2, 3.5, 0, 2.5], "rotation": 90, "texture": "#1"},
+				"down": {"uv": [2, 2.5, 0, 3.5], "rotation": 90, "texture": "#1"}
+			}
+		},
+		{
+			"name": "wires",
+			"from": [1.15267, 1, 7.77152],
+			"to": [3.14867, 2.996, 11.76752],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [1.65067, 1.498, 8.26952]},
+			"faces": {
+				"north": {"uv": [1.5, 3, 2, 3.5], "texture": "#1"},
+				"east": {"uv": [0, 2.5, 2, 3.5], "texture": "#1"},
+				"south": {"uv": [1.5, 3, 2, 3.5], "texture": "#1"},
+				"west": {"uv": [0, 2.5, 2, 3.5], "texture": "#1"},
+				"up": {"uv": [2, 3.5, 0, 2.5], "rotation": 90, "texture": "#1"},
+				"down": {"uv": [2, 2.5, 0, 3.5], "rotation": 90, "texture": "#1"}
+			}
+		},
+		{
+			"name": "box",
+			"from": [2, 0, 10],
+			"to": [14, 4, 15],
+			"rotation": {"angle": 0, "axis": "y", "origin": [2, 0, 10]},
+			"faces": {
+				"north": {"uv": [6, 0, 12, 2], "texture": "#1"},
+				"east": {"uv": [12, 0, 14.5, 2], "texture": "#1"},
+				"south": {"uv": [6, 0, 12, 2], "texture": "#1"},
+				"west": {"uv": [12, 0, 14.5, 2], "texture": "#1"},
+				"up": {"uv": [6, 2.5, 0, 0], "texture": "#1"},
+				"down": {"uv": [12, 2, 6, 4.5], "texture": "#1"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, 3, -2],
+			"scale": [0.55, 0.55, 0.55]
+		},
+		"thirdperson_lefthand": {
+			"translation": [0, 3, -2],
+			"scale": [0.55, 0.55, 0.55]
+		},
+		"firstperson_righthand": {
+			"rotation": [90, 0, 25],
+			"translation": [1.13, 3.2, 1.13],
+			"scale": [0.68, 0.68, 0.68]
+		},
+		"firstperson_lefthand": {
+			"rotation": [90, 0, 25],
+			"translation": [1.13, 3.2, 1.13],
+			"scale": [0.68, 0.68, 0.68]
+		},
+		"ground": {
+			"translation": [0, 2, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"gui": {
+			"rotation": [41, -138, 0],
+			"translation": [-0.25, 3.5, 0],
+			"scale": [0.8, 0.8, 0.8]
+		},
+		"fixed": {
+			"rotation": [-90, -135, 0],
+			"translation": [0, -1, -6.75]
+		}
+	},
+	"groups": [
+		{
+			"name": "base",
+			"origin": [15, 0.75, 6.5],
+			"scope": 0,
+			"color": 0,
+			"children": [
+				{
+					"name": "connections",
+					"origin": [15, 0.75, 6.5],
+					"scope": 0,
+					"color": 0,
+					"children": [0, 1, 2]
+				},
+				{
+					"name": "wires",
+					"origin": [15, 0.5, 6.5],
+					"scope": 0,
+					"color": 0,
+					"children": [3, 4]
+				},
+				5
+			]
+		}
+	]
+}
