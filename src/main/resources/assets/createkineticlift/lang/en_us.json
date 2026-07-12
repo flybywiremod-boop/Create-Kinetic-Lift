@@ -3,11 +3,11 @@
 
   "block.createkineticlift.control_seat.tooltip.summary": "A seat that lets you control turbofans",
   "block.createkineticlift.control_seat.tooltip.condition1": "When R-Clicked",
-  "block.createkineticlift.control_seat.tooltip.behaviour1": "You will sit on the seat and then you'll be able to control linked turbofans.",
+  "block.createkineticlift.control_seat.tooltip.behaviour1": "A gui will appear on your screen for indicating: speed, altitude and more!",
   "block.createkineticlift.control_seat.tooltip.condition2": "When R-Clicked with a wrench",
-  "block.createkineticlift.control_seat.tooltip.behaviour2": "The seat will change into a _co-pilot_ variant.",
+  "block.createkineticlift.control_seat.tooltip.behaviour2": "The seat will change into a _inverted_ version.",
 
-  "block.createkineticlift.regular_turbofan_intake.tooltip.summary": "Produces thrust up to _14500pN_, and consumes _20mB/s_ of fuel.",
+  "block.createkineticlift.regular_turbofan_intake.tooltip.summary": "Produces thrust up to _14,500pN_, and consumes _20mB/s_ of fuel.",
   "block.createkineticlift.regular_turbofan_intake.tooltip.condition1": "Assembly",
   "block.createkineticlift.regular_turbofan_intake.tooltip.behaviour1": "Connect the exhaust part and follow the Goggles' instructions.",
   "block.createkineticlift.regular_turbofan_intake.tooltip.condition2": "Controls",
@@ -15,7 +15,7 @@
 
   "item.createkineticlift.computer_cable.tooltip.summary": "Lets you connect the control seat to turbofans",
   "item.createkineticlift.computer_cable.tooltip.condition1": "Connecting",
-  "item.createkineticlift.computer_cable.tooltip.behaviour1": "R-Click the seat, and you have an _input_. R-Click assembled turbofans, and you have an _output_!",
+  "item.createkineticlift.computer_cable.tooltip.behaviour1": "R-Click the seat to make it funtion. R-Click the assembled turbofans, and you have an funtional mechanics!",
 
   "createkineticlift.gui.goggles.turbofan.header": "Turbofan Info",
   "createkineticlift.gui.goggles.turbofan.unfinished": "Turbofan unfinished",

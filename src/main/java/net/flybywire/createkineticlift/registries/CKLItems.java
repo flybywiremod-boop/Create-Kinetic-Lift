@@ -19,7 +19,7 @@ public class CKLItems {
 
 	public static final ItemEntry<TurbofanBladeItem> IRON_BLADE = REGISTRATE
 		.item("iron_blade", TurbofanBladeItem::new)
-		.lang("Iron Blade")
+		.lang("Fan Blade")
 		.model(AssetLookup.existingItemModel())
 		.recipe((ctx, prov) ->
 			ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ctx.get(), 3)
