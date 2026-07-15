@@ -27,7 +27,7 @@ public record CableRemoveConnectionPacket(BlockPos sourcePos, BlockPos clickedPo
 	public void handle(ServerPlayer player) {
 		ServerLevel level = player.serverLevel();
 
-		if (!isValidSource(player, level)) {
+		if (!isValidSource(level)) {
 			sync(player, level);
 			return;
 		}
@@ -45,9 +45,8 @@ public record CableRemoveConnectionPacket(BlockPos sourcePos, BlockPos clickedPo
 		sync(player, level);
 	}
 
-	private boolean isValidSource(ServerPlayer player, ServerLevel level) {
-		return player.canInteractWithBlock(sourcePos, 1)
-			&& sourcePos.equals(AvionicsHelper.getSourceBlockEntityPos(level, sourcePos));
+	private boolean isValidSource(ServerLevel level) {
+		return sourcePos.equals(AvionicsHelper.getSourceBlockEntityPos(level, sourcePos));
 	}
 
 	private void sync(ServerPlayer player, ServerLevel level) {

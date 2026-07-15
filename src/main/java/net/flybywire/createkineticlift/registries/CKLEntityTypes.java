@@ -1,5 +1,7 @@
 package net.flybywire.createkineticlift.registries;
 
+import dev.ryanhcode.sable.index.SableTags;
+
 import net.flybywire.createkineticlift.CreateKineticLift;
 import net.flybywire.createkineticlift.content.controlseat.ControlSeatEntity;
 
@@ -21,6 +23,7 @@ public class CKLEntityTypes {
 			.setUpdateInterval(Integer.MAX_VALUE)
 			.setShouldReceiveVelocityUpdates(false)
 			.fireImmune())
+		.tag(SableTags.RETAIN_IN_SUB_LEVEL)
 		.renderer(() -> SeatEntity.Render::new)
 		.register();
 
