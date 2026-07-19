@@ -1,5 +1,7 @@
 package net.flybywire.createkineticlift.registries;
 
+import com.tterrag.registrate.providers.DataGenContext;
+
 import net.flybywire.createkineticlift.CreateKineticLift;
 import net.flybywire.createkineticlift.content.cable.ComputerCableItem;
 import net.flybywire.createkineticlift.content.turbofan.blades.TurbofanBladeItem;
@@ -12,6 +14,7 @@ import com.tterrag.registrate.util.entry.ItemEntry;
 
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.world.item.Items;
 
 public class CKLItems {
 
