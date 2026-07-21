@@ -3,13 +3,13 @@
   "credit": "Made with Blockbench",
   "texture_size": [128, 128],
   "textures": {
-    "0": "block/sidestickcolor/blue/side_blue",
-    "1": "block/sidestickcolor/blue/blue_cushion",
-    "2": "block/sidestickcolor/blue/blue_back",
-    "3": "block/sidestickcolor/wooden_seat",
-    "4": "block/sidestickcolor/sidestick",
-    "5": "block/sidestickcolor/blue/top_blue_seat",
-    "particle": "side_blue"
+    "0": "createkineticlift:block/sidestickcolor/blue/side_blue_seat",
+    "1": "createkineticlift:block/sidestickcolor/blue/blue_cushion",
+    "2": "createkineticlift:block/sidestickcolor/blue/blue_back",
+    "3": "createkineticlift:block/sidestickcolor/wooden_seat",
+    "4": "createkineticlift:block/sidestickcolor/sidestick",
+    "5": "createkineticlift:block/sidestickcolor/blue/top_blue_seat",
+    "particle": "minecraft:oak_planks"
   },
   "elements": [
     {
