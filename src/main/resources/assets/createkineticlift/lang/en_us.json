@@ -13,9 +13,7 @@
   "block.createkineticlift.regular_turbofan_intake.tooltip.condition2": "Controls",
   "block.createkineticlift.regular_turbofan_intake.tooltip.behaviour2": "Connect it to a _control seat_ to control it.",
 
-  "item.createkineticlift.computer_cable.tooltip.summary": "Lets you connect the control seat to any funtionals",
-  "item.createkineticlift.computer_cable.tooltip.condition1": "Connecting",
-  "item.createkineticlift.computer_cable.tooltip.behaviour1": "R-Click the seat to make it funtion. R-Click the assembled turbofans, and you have a funtional turbofan!",
+  "item.createkineticlift.computer_cable.tooltip.summary": "Lets you connect the control seat to any _control surfaces._",
 
   "createkineticlift.gui.goggles.turbofan.header": "Turbofan Info",
   "createkineticlift.gui.goggles.turbofan.unfinished": "Turbofan unfinished",
