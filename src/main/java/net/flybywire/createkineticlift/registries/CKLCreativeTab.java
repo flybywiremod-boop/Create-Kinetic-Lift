@@ -14,7 +14,7 @@ public class CKLCreativeTab {
 
 	private static final DeferredRegister<CreativeModeTab> TAB_REGISTER =
 		DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CreateKineticLift.MOD_ID);
-	
+
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CREATIVE_TAB = TAB_REGISTER.register("ckl_creative_tab",
 		() -> CreativeModeTab.builder()
 			.title(Component.translatable("itemGroup.createkineticlift.creative_tab"))
@@ -25,6 +25,7 @@ public class CKLCreativeTab {
 				output.accept(CKLBlocks.REGULAR_TURBOFAN_EXHAUST.get());
 				output.accept(CKLItems.IRON_BLADE.get());
 				output.accept(CKLItems.COMPUTER_CABLE.get());
+				output.accept(CKLItems.TURBOFAN_ENGINE.get());
 				output.accept(CKLFluids.KEROSENE.getBucket().orElseThrow());
 			})
 			.build());
