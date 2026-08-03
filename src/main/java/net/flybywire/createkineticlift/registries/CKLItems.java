@@ -1,7 +1,5 @@
 package net.flybywire.createkineticlift.registries;
 
-import com.tterrag.registrate.providers.DataGenContext;
-
 import net.flybywire.createkineticlift.CreateKineticLift;
 import net.flybywire.createkineticlift.content.cable.ComputerCableItem;
 import net.flybywire.createkineticlift.content.turbofan.blades.TurbofanBladeItem;
@@ -12,9 +10,10 @@ import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import com.tterrag.registrate.util.entry.ItemEntry;
 
+import net.flybywire.createkineticlift.content.turbofan_engine.TurbofanEngineItem;
+
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
-import net.minecraft.world.item.Items;
 
 public class CKLItems {
 
@@ -47,6 +46,12 @@ public class CKLItems {
 				.unlockedBy("has_ingredient", RegistrateRecipeProvider.has(AllItems.IRON_SHEET))
 				.save(prov)
 		)
+		.register();
+
+	public static final ItemEntry<TurbofanEngineItem> TURBOFAN_ENGINE = REGISTRATE
+		.item("turbofan_engine", TurbofanEngineItem::new)
+		.lang("Jet")
+		.model(AssetLookup.existingItemModel())
 		.register();
 
 	public static void register() {
