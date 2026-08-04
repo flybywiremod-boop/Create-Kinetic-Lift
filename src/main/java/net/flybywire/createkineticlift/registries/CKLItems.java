@@ -43,7 +43,7 @@ public class CKLItems {
 				.pattern("STS")
 				.define('S', AllItems.IRON_SHEET)
 				.define('T', AllItems.TRANSMITTER)
-				.unlockedBy("has_ingredient", RegistrateRecipeProvider.has(AllItems.IRON_SHEET))
+				.unlockedBy("has_ingredient", RegistrateRecipeProvider.has(CKLBlocks.SMART_ENGINE_MOUNT_BLOCK))
 				.save(prov)
 		)
 		.register();

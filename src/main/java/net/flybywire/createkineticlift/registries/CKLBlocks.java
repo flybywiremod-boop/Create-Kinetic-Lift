@@ -3,8 +3,11 @@ package net.flybywire.createkineticlift.registries;
 import static com.simibubi.create.foundation.data.TagGen.axeOrPickaxe;
 import static com.simibubi.create.foundation.data.TagGen.pickaxeOnly;
 
+import com.simibubi.create.AllBlocks;
+
 import net.flybywire.createkineticlift.CreateKineticLift;
 import net.flybywire.createkineticlift.content.controlseat.ControlSeatBlock;
+import net.flybywire.createkineticlift.content.smart_engine_mount.SmartEngineMountBlock;
 import net.flybywire.createkineticlift.content.turbofan.AbstractTurbofanCoreBlock;
 import net.flybywire.createkineticlift.content.turbofan.TurbofanExhaustBlock;
 import net.flybywire.createkineticlift.content.turbofan.TurbofanExhaustBlockItem;
@@ -111,6 +114,31 @@ public class CKLBlocks {
 		.transform(pickaxeOnly())
 		.tag(BlockTags.NEEDS_IRON_TOOL)
 		.register();
+
+	public static final BlockEntry<SmartEngineMountBlock> SMART_ENGINE_MOUNT_BLOCK = REGISTRATE
+		.block("smart_engine_mount", SmartEngineMountBlock::new)
+		.initialProperties(SharedProperties::softMetal)
+		.properties(p -> p
+			.requiresCorrectToolForDrops()
+			.strength(5.5f, 4.0f)
+			.blockstate(CKLBlockStateGen.invertedHorizontalBlockProvider())
+			.transform(pickaxeOnly())
+			.tag(BlockTags.NEEDS_IRON_TOOL)
+			.item()
+			.build()
+			.recipe((ctx, prov) ->
+				ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ctx.get(), 1)
+					.pattern("  E")
+					.pattern("IPT")
+					.pattern("   ")
+					.define('I', AllItems.IRON_SHEET)
+					.define('T', AllBlocks.FLUID_TANK)
+					.define('P', AllBlocks.FLUID_PIPE)
+					.define('E', AllItems.ELECTRON_TUBE)
+					.unlockedBy("has_ingredient", RegistrateRecipeProvider.has(CKLItems.TURBOFAN_ENGINE))
+					.save(prov)
+			)
+			.register();
 
 	public static void register() {
 	}

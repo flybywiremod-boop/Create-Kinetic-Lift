@@ -23,9 +23,12 @@ public class CKLCreativeTab {
 				output.accept(CKLBlocks.CONTROL_SEAT.get());
 				output.accept(CKLBlocks.REGULAR_TURBOFAN_INTAKE.get());
 				output.accept(CKLBlocks.REGULAR_TURBOFAN_EXHAUST.get());
+
 				output.accept(CKLItems.IRON_BLADE.get());
 				output.accept(CKLItems.COMPUTER_CABLE.get());
 				output.accept(CKLItems.TURBOFAN_ENGINE.get());
+				output.accept(CKLBlocks.SMART_ENGINE_MOUNT_BLOCK.get());
+
 				output.accept(CKLFluids.KEROSENE.getBucket().orElseThrow());
 			})
 			.build());
