@@ -131,6 +131,10 @@ tasks.named('processResources', Copy) {
     duplicatesStrategy = DuplicatesStrategy.INCLUDE
 }
 
+tasks.named("processResources") {
+    mustRunAfter("cleanGenerated")
+}
+
 tasks.register("cleanGenerated", Delete) {
     delete("src/generated/resources/assets/createkineticlift/lang")
 }
