@@ -3,6 +3,7 @@
     "createkineticlift:control_seat",
     "createkineticlift:regular_turbofan_intake",
     "createkineticlift:regular_turbofan_exhaust",
-    "createkineticlift:turbofan_structure"
+    "createkineticlift:turbofan_structure",
+    "createkineticlift:smart_engine_mount"
   ]
 }

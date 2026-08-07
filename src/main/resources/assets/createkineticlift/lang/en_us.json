@@ -13,6 +13,8 @@
   "block.createkineticlift.regular_turbofan_intake.tooltip.condition2": "Controls",
   "block.createkineticlift.regular_turbofan_intake.tooltip.behaviour2": "Connect it to a _control seat_ to control it.",
 
+  "block.createkineticlift.smart_engine_mount": "Whatever Name You Want",
+
   "item.createkineticlift.computer_cable.tooltip.summary": "Lets you connect the control seat to any _control surfaces._",
 
   "createkineticlift.gui.goggles.turbofan.header": "Turbofan Info",

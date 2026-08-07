@@ -50,7 +50,7 @@ public class CKLItems {
 
 	public static final ItemEntry<TurbofanEngineItem> TURBOFAN_ENGINE = REGISTRATE
 		.item("turbofan_engine", TurbofanEngineItem::new)
-		.lang("Jet")
+		.lang("Large Turbofan")
 		.model(AssetLookup.existingItemModel())
 		.register();
 

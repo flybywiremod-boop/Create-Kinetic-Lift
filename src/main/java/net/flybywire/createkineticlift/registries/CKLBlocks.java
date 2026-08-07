@@ -121,24 +121,24 @@ public class CKLBlocks {
 		.properties(p -> p
 			.requiresCorrectToolForDrops()
 			.strength(5.5f, 4.0f)
-			.blockstate(CKLBlockStateGen.invertedHorizontalBlockProvider())
-			.transform(pickaxeOnly())
-			.tag(BlockTags.NEEDS_IRON_TOOL)
-			.item()
-			.build()
-			.recipe((ctx, prov) ->
-				ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ctx.get(), 1)
-					.pattern("  E")
-					.pattern("IPT")
-					.pattern("   ")
-					.define('I', AllItems.IRON_SHEET)
-					.define('T', AllBlocks.FLUID_TANK)
-					.define('P', AllBlocks.FLUID_PIPE)
-					.define('E', AllItems.ELECTRON_TUBE)
-					.unlockedBy("has_ingredient", RegistrateRecipeProvider.has(CKLItems.TURBOFAN_ENGINE))
-					.save(prov)
-			)
-			.register();
+			.noOcclusion())
+		.blockstate(CKLBlockStateGen.horizontalBlockProvider())
+		.transform(pickaxeOnly())
+		.tag(BlockTags.NEEDS_IRON_TOOL)
+		.item()
+		.build()
+		.recipe((ctx, prov) ->
+			ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ctx.get(), 1)
+				.pattern(" IE")
+				.pattern("ITP")
+				.define('I', AllItems.IRON_SHEET)
+				.define('E', AllItems.ELECTRON_TUBE)
+				.define('T', AllBlocks.FLUID_TANK)
+				.define('P', AllBlocks.FLUID_PIPE)
+				.unlockedBy("has_ingredient", RegistrateRecipeProvider.has(AllItems.PRECISION_MECHANISM))
+				.save(prov)
+		)
+		.register();
 
 	public static void register() {
 	}
