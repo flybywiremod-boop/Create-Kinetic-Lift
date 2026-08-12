@@ -1,9 +1,0 @@
-{
-  "parent": "createkineticlift:block/control_seat_inverted",
-  "textures": {
-    "0": "createkineticlift:block/sidestickcolor/black/side_black_seat",
-    "1": "createkineticlift:block/sidestickcolor/black/black_cushion",
-    "2": "createkineticlift:block/sidestickcolor/black/black_back",
-    "5": "createkineticlift:block/sidestickcolor/black/top_black_seat"
-  }
-}
