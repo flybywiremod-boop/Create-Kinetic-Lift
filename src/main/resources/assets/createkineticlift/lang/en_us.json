@@ -1,9 +1,9 @@
 {
   "itemGroup.createkineticlift.creative_tab": "Create Kinetic Lift",
 
-  "block.createkineticlift.control_seat.tooltip.summary": "Sit yourself down and see your statistics of the _control surfaces_!",
+  "block.createkineticlift.control_seat.tooltip.summary": "Sit yourself down and see your statistics of the funtionals!",
   "block.createkineticlift.control_seat.tooltip.condition1": "When R-Clicked",
-  "block.createkineticlift.control_seat.tooltip.behaviour1": "Sits the player on the _Chair_. Press L-shift to leave the _Chair_.",
+  "block.createkineticlift.control_seat.tooltip.behaviour1": "Sits the player on the _Sidestick Chair_. Press L-shift to leave the _Sidestick Chair_.",
   "block.createkineticlift.control_seat.tooltip.condition2": "When R-Clicked with a wrench",
   "block.createkineticlift.control_seat.tooltip.behaviour2": "Toggles a _First-Officer_ version.",
 

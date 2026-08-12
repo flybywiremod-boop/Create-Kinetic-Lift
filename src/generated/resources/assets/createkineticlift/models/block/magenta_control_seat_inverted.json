@@ -1,0 +1,9 @@
+{
+  "parent": "createkineticlift:block/control_seat_inverted",
+  "textures": {
+    "0": "createkineticlift:block/sidestickcolor/magenta/side_magenta_seat",
+    "1": "createkineticlift:block/sidestickcolor/magenta/magenta_cushion",
+    "2": "createkineticlift:block/sidestickcolor/magenta/magenta_back",
+    "5": "createkineticlift:block/sidestickcolor/magenta/top_magenta_seat"
+  }
+}

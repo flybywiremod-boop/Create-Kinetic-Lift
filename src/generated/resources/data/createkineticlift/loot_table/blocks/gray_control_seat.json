@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "createkineticlift:black_control_seat"
+          "name": "createkineticlift:gray_control_seat"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "createkineticlift:black_control_seat"
+  "random_sequence": "createkineticlift:gray_control_seat"
 }

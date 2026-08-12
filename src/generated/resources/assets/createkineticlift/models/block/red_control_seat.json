@@ -1,0 +1,9 @@
+{
+  "parent": "createkineticlift:block/control_seat",
+  "textures": {
+    "0": "createkineticlift:block/sidestickcolor/red/side_red_seat",
+    "1": "createkineticlift:block/sidestickcolor/red/red_cushion",
+    "2": "createkineticlift:block/sidestickcolor/red/red_back",
+    "5": "createkineticlift:block/sidestickcolor/red/top_red_seat"
+  }
+}

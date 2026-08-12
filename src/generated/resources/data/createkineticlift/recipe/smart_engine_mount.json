@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "create:electron_tube"
+    },
+    "I": {
+      "item": "create:iron_sheet"
+    },
+    "P": {
+      "item": "create:fluid_pipe"
+    },
+    "T": {
+      "item": "create:fluid_tank"
+    }
+  },
+  "pattern": [
+    " IE",
+    "ITP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "createkineticlift:smart_engine_mount"
+  }
+}
