@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "createkineticlift:smart_engine_mount"
+          "name": "createkineticlift:black_control_seat"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "createkineticlift:blocks/smart_engine_mount"
+  "random_sequence": "createkineticlift:blocks/black_control_seat"
 }

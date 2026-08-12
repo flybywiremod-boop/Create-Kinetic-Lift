@@ -115,31 +115,34 @@ public class CKLBlocks {
 		.tag(BlockTags.NEEDS_IRON_TOOL)
 		.register();
 
-	public static final BlockEntry<SmartEngineMountBlock> SMART_ENGINE_MOUNT_BLOCK = REGISTRATE
-		.block("smart_engine_mount", SmartEngineMountBlock::new)
-		.initialProperties(SharedProperties::softMetal)
-		.properties(p -> p
-			.requiresCorrectToolForDrops()
-			.strength(5.5f, 4.0f)
-			.noOcclusion())
-		.blockstate(CKLBlockStateGen.horizontalBlockProvider())
-		.transform(pickaxeOnly())
-		.tag(BlockTags.NEEDS_IRON_TOOL)
-		.item()
-		.build()
-		.recipe((ctx, prov) ->
-			ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ctx.get(), 1)
-				.pattern(" IE")
-				.pattern("ITP")
-				.define('I', AllItems.IRON_SHEET)
-				.define('E', AllItems.ELECTRON_TUBE)
-				.define('T', AllBlocks.FLUID_TANK)
-				.define('P', AllBlocks.FLUID_PIPE)
-				.unlockedBy("has_ingredient", RegistrateRecipeProvider.has(AllItems.PRECISION_MECHANISM))
-				.save(prov)
-		)
-		.register();
-
 	public static void register() {
 	}
+
+//	public static final BlockEntry<SmartEngineMountBlock> SMART_ENGINE_MOUNT_BLOCK = REGISTRATE
+//		.block("smart_engine_mount", SmartEngineMountBlock::new)
+//		.initialProperties(SharedProperties::softMetal)
+//		.properties(p -> p
+//			.requiresCorrectToolForDrops()
+//			.strength(5.5f, 4.0f)
+//			.noOcclusion())
+//		.blockstate(CKLBlockStateGen.horizontalBlockProvider())
+//		.transform(pickaxeOnly())
+//		.tag(BlockTags.NEEDS_IRON_TOOL)
+//		.item()
+//		.build()
+//		.recipe((ctx, prov) ->
+//			ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ctx.get(), 1)
+//				.pattern(" IE")
+//				.pattern("ITP")
+//				.define('I', AllItems.IRON_SHEET)
+//				.define('E', AllItems.ELECTRON_TUBE)
+//				.define('T', AllBlocks.FLUID_TANK)
+//				.define('P', AllBlocks.FLUID_PIPE)
+//				.unlockedBy("has_ingredient", RegistrateRecipeProvider.has(AllItems.PRECISION_MECHANISM))
+//				.save(prov)
+//		)
+//		.register();
+
+//	public static void register() {
+//	}
 }

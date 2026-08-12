@@ -27,7 +27,7 @@ public class CKLCreativeTab {
 				output.accept(CKLItems.IRON_BLADE.get());
 				output.accept(CKLItems.COMPUTER_CABLE.get());
 				output.accept(CKLItems.TURBOFAN_ENGINE.get());
-				output.accept(CKLBlocks.SMART_ENGINE_MOUNT_BLOCK.get());
+				// output.accept(CKLBlocks.SMART_ENGINE_MOUNT_BLOCK.get());
 
 				output.accept(CKLFluids.KEROSENE.getBucket().orElseThrow());
 			})
