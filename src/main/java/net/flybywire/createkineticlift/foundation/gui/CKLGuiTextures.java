@@ -16,7 +16,12 @@ import net.neoforged.api.distmarker.OnlyIn;
 public enum CKLGuiTextures implements ScreenElement, TextureSheetSegment {
 
 	//Chair
-	CHAIR_LINK("chair_linkage", 131, 109),
+	SEAT_LINK("ChairLink", 0, 0, 131, 109),
+	SEAT_BIN_PRESSED("ChairLink",0,109,18,18),
+	SEAT_BIN("ChairLink",18,109,18,18),
+
+
+
 	// CHAIR_ENG("chair_information",  ???, ???,),
 	// CHAIR_ENG_REV("chair_information",  ???, ???,),
 	// CHAIR_ENG_POINTER("chair_information",  ???, ???,),
