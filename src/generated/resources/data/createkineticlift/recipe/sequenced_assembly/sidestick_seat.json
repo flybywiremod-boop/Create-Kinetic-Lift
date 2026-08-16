@@ -33,7 +33,7 @@
       "type": "create:deploying",
       "ingredients": [
         {
-          "item": "createkineticlift:incomplete_sidestick"
+          "item": "createkineticlift:incomplete_seat"
         },
         {
           "tag": "minecraft:slabs"
@@ -41,7 +41,7 @@
       ],
       "results": [
         {
-          "id": "createkineticlift:incomplete_sidestick"
+          "id": "createkineticlift:incomplete_seat"
         }
       ]
     },
@@ -49,7 +49,7 @@
       "type": "create:deploying",
       "ingredients": [
         {
-          "item": "createkineticlift:incomplete_sidestick"
+          "item": "createkineticlift:incomplete_seat"
         },
         {
           "item": "create:iron_sheet"
@@ -57,7 +57,7 @@
       ],
       "results": [
         {
-          "id": "createkineticlift:incomplete_sidestick"
+          "id": "createkineticlift:incomplete_seat"
         }
       ]
     },
@@ -65,7 +65,7 @@
       "type": "create:deploying",
       "ingredients": [
         {
-          "item": "createkineticlift:incomplete_sidestick"
+          "item": "createkineticlift:incomplete_seat"
         },
         {
           "item": "create:transmitter"
@@ -73,7 +73,7 @@
       ],
       "results": [
         {
-          "id": "createkineticlift:incomplete_sidestick"
+          "id": "createkineticlift:incomplete_seat"
         }
       ]
     },
@@ -81,7 +81,7 @@
     "type": "create:deploying",
     "ingredients": [
       {
-        "item": "createkineticlift:incomplete_sidestick"
+        "item": "createkineticlift:incomplete_seat"
       },
       {
         "item": "create:electron_tube"
@@ -89,7 +89,7 @@
     ],
     "results": [
       {
-        "id": "createkineticlift:incomplete_sidestick"
+        "id": "createkineticlift:incomplete_seat"
       }
     ]
     },
@@ -97,7 +97,7 @@
       "type": "create:deploying",
       "ingredients": [
         {
-          "item": "createkineticlift:incomplete_sidestick"
+          "item": "createkineticlift:incomplete_seat"
         },
         {
           "item": "simulated:throttle_lever"
@@ -105,12 +105,12 @@
       ],
       "results": [
         {
-          "id": "createkineticlift:incomplete_sidestick"
+          "id": "createkineticlift:incomplete_seat"
         }
       ]
     }
   ],
   "transitional_item": {
-    "id": "create:incomplete_sidestick"
+    "id": "create:incomplete_seat"
   }
 }

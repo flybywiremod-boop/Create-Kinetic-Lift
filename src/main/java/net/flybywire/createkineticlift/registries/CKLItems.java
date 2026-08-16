@@ -2,6 +2,7 @@ package net.flybywire.createkineticlift.registries;
 
 import net.flybywire.createkineticlift.CreateKineticLift;
 import net.flybywire.createkineticlift.content.cable.ComputerCableItem;
+import net.flybywire.createkineticlift.content.incomplete_seat.IncompleteSeatItem;
 import net.flybywire.createkineticlift.content.turbofan.blades.TurbofanBladeItem;
 
 import com.simibubi.create.AllItems;
@@ -33,6 +34,12 @@ public class CKLItems {
 				.save(prov)
 		)
 		.register();
+
+	public static final ItemEntry<IncompleteSeatItem> INCOMPLETE_SEAT = REGISTRATE
+		.item("incomplete_seat", IncompleteSeatItem::new)
+		.lang("incomplete_seat")
+		.model(AssetLookup.existingItemModel())
+			.register();
 
 	public static final ItemEntry<ComputerCableItem> COMPUTER_CABLE = REGISTRATE
 		.item("computer_cable", ComputerCableItem::new)
