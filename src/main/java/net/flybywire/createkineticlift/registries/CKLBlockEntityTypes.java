@@ -1,7 +1,7 @@
 package net.flybywire.createkineticlift.registries;
 
 import net.flybywire.createkineticlift.CreateKineticLift;
-import net.flybywire.createkineticlift.content.controlseat.ControlSeatBlockEntity;
+import net.flybywire.createkineticlift.content.controlseat.SidestickBlockEntity;
 import net.flybywire.createkineticlift.content.turbofan.TurbofanBlockEntity;
 import net.flybywire.createkineticlift.content.turbofan.TurbofanRenderer;
 import net.flybywire.createkineticlift.content.turbofan.TurbofanStructuralBlockEntity;
@@ -13,8 +13,8 @@ public class CKLBlockEntityTypes {
 
 	private static final CreateRegistrate REGISTRATE = CreateKineticLift.REGISTRATE;
 
-	public static final BlockEntityEntry<ControlSeatBlockEntity> CONTROL_SEAT = REGISTRATE
-		.blockEntity("control_seat", ControlSeatBlockEntity::new)
+	public static final BlockEntityEntry<SidestickBlockEntity> CONTROL_SEAT = REGISTRATE
+		.blockEntity("control_seat", SidestickBlockEntity::new)
 		.validBlocks(CKLBlocks.CONTROL_SEAT)
 		.register();
 

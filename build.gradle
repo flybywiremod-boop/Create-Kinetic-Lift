@@ -22,6 +22,7 @@ repositories {
     maven { url = "https://maven.ryanhcode.dev/releases" } // Sable
     maven { url = 'https://maven.blamejared.com' } // Veil
     maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/" } // ForgeConfigAPIPort
+    maven { url = "https://maven.theillusivec4.top/" } // Curios API
 }
 
 //configurations {
@@ -31,14 +32,17 @@ repositories {
 dependencies {
     implementation("com.simibubi.create:create-${minecraft_version}:${create_version}:slim") { transitive = false }
     implementation "net.createmod.ponder:ponder-neoforge:${ponder_version}+mc${minecraft_version}"
+
     compileOnly "dev.engine-room.flywheel:flywheel-neoforge-api-${minecraft_version}:${flywheel_version}"
     runtimeOnly "dev.engine-room.flywheel:flywheel-neoforge-${minecraft_version}:${flywheel_version}"
+
     implementation "com.tterrag.registrate:Registrate:${registrate_version}"
+
     implementation "dev.ryanhcode.sable:sable-neoforge-${minecraft_version}:${sable_version}"
     compileOnly "dev.ryanhcode.sable-companion:sable-companion-common-${minecraft_version}:${sable_companion_version}"
 
-    //implementation("dev.simulated_team.simulated:simulated-neoforge-$minecraft_version:$simulated_version") { transitive = false }
-    //compileOnly "dev.eriksonn.aeronautics:aeronautics-neoforge-$minecraft_version:$aeronautics_version"
+    implementation("dev.simulated_team.simulated:simulated-neoforge-$minecraft_version:$simulated_version") { transitive = false }
+    compileOnly "dev.eriksonn.aeronautics:aeronautics-neoforge-$minecraft_version:$aeronautics_version"
 
     implementation "maven.modrinth:create-aeronautics:$aeronautics_version+mc$minecraft_version"
 

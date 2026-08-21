@@ -1,6 +1,6 @@
 package net.flybywire.createkineticlift.foundation.data;
 
-import net.flybywire.createkineticlift.content.controlseat.ControlSeatBlock;
+import net.flybywire.createkineticlift.content.controlseat.SidestickBlock;
 
 import com.tterrag.registrate.providers.DataGenContext;
 import com.tterrag.registrate.providers.RegistrateBlockstateProvider;
@@ -23,7 +23,7 @@ public class CKLBlockStateGen {
 			prov.horizontalBlock(
 				ctx.get(),
 				state -> {
-					return prov.models().getExistingFile(prov.modLoc("block/" + ctx.getName() + (state.getValue(ControlSeatBlock.INVERTED) ? "_inverted" : "")));
+					return prov.models().getExistingFile(prov.modLoc("block/" + ctx.getName() + (state.getValue(SidestickBlock.INVERTED) ? "_inverted" : "")));
 				});
 		};
 	}

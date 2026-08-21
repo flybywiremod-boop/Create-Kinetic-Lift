@@ -12,9 +12,9 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class ControlSeatBlockEntity extends SmartBlockEntity implements IAvionicsSource {
+public class SidestickBlockEntity extends SmartBlockEntity implements IAvionicsSource {
 
-	public ControlSeatBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
+	public SidestickBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
 		super(type, pos, state);
 	}
 
@@ -24,7 +24,7 @@ public class ControlSeatBlockEntity extends SmartBlockEntity implements IAvionic
 
 	@Override
 	public boolean isControlledBy(Player player) {
-		return player.getVehicle() instanceof ControlSeatEntity seat
+		return player.getVehicle() instanceof SidestickEntity seat
 			&& worldPosition.equals(seat.getSourcePos());
 	}
 }

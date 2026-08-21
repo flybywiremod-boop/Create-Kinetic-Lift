@@ -14,17 +14,17 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.Level;
 
-public class ControlSeatEntity extends SeatEntity {
+public class SidestickEntity extends SeatEntity {
 
 	private static final EntityDataAccessor<BlockPos> SOURCE_POS =
-		SynchedEntityData.defineId(ControlSeatEntity.class, EntityDataSerializers.BLOCK_POS);
+		SynchedEntityData.defineId(SidestickEntity.class, EntityDataSerializers.BLOCK_POS);
 
-	public ControlSeatEntity(EntityType<?> type, Level level) {
+	public SidestickEntity(EntityType<?> type, Level level) {
 		super(type, level);
 		noPhysics = true;
 	}
 
-	public ControlSeatEntity(Level level, BlockPos sourcePos) {
+	public SidestickEntity(Level level, BlockPos sourcePos) {
 		this(CKLEntityTypes.CONTROL_SEAT.get(), level);
 		setSourcePos(sourcePos);
 	}
@@ -53,8 +53,8 @@ public class ControlSeatEntity extends SeatEntity {
 		BlockPos sourcePos = getSourcePos();
 
 		boolean sourcePresent = serverLevel.getBlockState(sourcePos)
-			.getBlock() instanceof ControlSeatBlock
-			&& serverLevel.getBlockEntity(sourcePos) instanceof ControlSeatBlockEntity;
+			.getBlock() instanceof SidestickBlock
+			&& serverLevel.getBlockEntity(sourcePos) instanceof SidestickBlockEntity;
 
 		if (isVehicle() && sourcePresent)
 			return;

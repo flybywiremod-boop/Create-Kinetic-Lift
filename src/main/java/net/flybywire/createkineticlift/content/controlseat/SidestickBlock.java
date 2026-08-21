@@ -46,12 +46,12 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import net.neoforged.neoforge.common.util.FakePlayer;
 
-public class ControlSeatBlock extends SeatBlock implements IWrenchable, IAvionicsActorProvider, IBE<ControlSeatBlockEntity> {
+public class SidestickBlock extends SeatBlock implements IWrenchable, IAvionicsActorProvider, IBE<SidestickBlockEntity> {
 
 	public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 	public static final BooleanProperty INVERTED = BooleanProperty.create("inverted");
 
-	public ControlSeatBlock(Properties properties) {
+	public SidestickBlock(Properties properties) {
 		super(properties, DyeColor.BLUE);
 		registerDefaultState(defaultBlockState()
 			.setValue(FACING, Direction.NORTH)
@@ -122,9 +122,9 @@ public class ControlSeatBlock extends SeatBlock implements IWrenchable, IAvionic
 			return ItemInteractionResult.SUCCESS;
 		}
 
-		List<ControlSeatEntity> seats = level.getEntitiesOfClass(ControlSeatEntity.class, new AABB(pos));
+		List<SidestickEntity> seats = level.getEntitiesOfClass(SidestickEntity.class, new AABB(pos));
 		if (!seats.isEmpty()) {
-			ControlSeatEntity seatEntity = seats.get(0);
+			SidestickEntity seatEntity = seats.get(0);
 			List<Entity> passengers = seatEntity.getPassengers();
 			if (!passengers.isEmpty() && passengers.get(0) instanceof Player)
 				return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
@@ -153,7 +153,7 @@ public class ControlSeatBlock extends SeatBlock implements IWrenchable, IAvionic
 			.relative(lateral, 0.28125)
 			.relative(Direction.DOWN, 0.1875);
 
-		ControlSeatEntity seat = new ControlSeatEntity(level, pos);
+		SidestickEntity seat = new SidestickEntity(level, pos);
 		seat.setPos(entityPos.x, entityPos.y, entityPos.z);
 		level.addFreshEntity(seat);
 		entity.startRiding(seat, true);
@@ -170,21 +170,21 @@ public class ControlSeatBlock extends SeatBlock implements IWrenchable, IAvionic
 		level.setBlock(pos, state.cycle(INVERTED), Block.UPDATE_ALL);
 		AllSoundEvents.WRENCH_ROTATE.playOnServer(level, pos, 1, Create.RANDOM.nextFloat() + .5f);
 
-		List<ControlSeatEntity> seats = level.getEntitiesOfClass(ControlSeatEntity.class, new AABB(pos));
+		List<SidestickEntity> seats = level.getEntitiesOfClass(SidestickEntity.class, new AABB(pos));
 		if (!seats.isEmpty()) {
-			ControlSeatEntity seatEntity = seats.get(0);
+			SidestickEntity seatEntity = seats.get(0);
 			seatEntity.discard();
 		}
 		return InteractionResult.SUCCESS;
 	}
 
 	@Override
-	public Class<ControlSeatBlockEntity> getBlockEntityClass() {
-		return ControlSeatBlockEntity.class;
+	public Class<SidestickBlockEntity> getBlockEntityClass() {
+		return SidestickBlockEntity.class;
 	}
 
 	@Override
-	public BlockEntityType<? extends ControlSeatBlockEntity> getBlockEntityType() {
+	public BlockEntityType<? extends SidestickBlockEntity> getBlockEntityType() {
 		return CKLBlockEntityTypes.CONTROL_SEAT.get();
 	}
 }

@@ -16,7 +16,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 
 @EventBusSubscriber(modid = CreateKineticLift.MOD_ID, value = Dist.CLIENT)
-public final class ControlSeatInputHandler {
+public final class SidestickInputHandler {
 
 	private static BlockPos activeSourcePos;
 	private static float lastThrottleUp = -1.0f;
@@ -24,7 +24,7 @@ public final class ControlSeatInputHandler {
 	private static boolean lastReverseTogglePressed;
 	private static boolean lastEngineTogglePressed;
 
-	private ControlSeatInputHandler() {
+	private SidestickInputHandler() {
 	}
 
 	@SubscribeEvent
@@ -37,7 +37,7 @@ public final class ControlSeatInputHandler {
 			return;
 		}
 
-		if (!(player.getVehicle() instanceof ControlSeatEntity seat)) {
+		if (!(player.getVehicle() instanceof SidestickEntity seat)) {
 			reset();
 			return;
 		}

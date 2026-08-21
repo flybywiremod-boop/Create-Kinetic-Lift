@@ -3,11 +3,10 @@ package net.flybywire.createkineticlift.registries;
 import static com.simibubi.create.foundation.data.TagGen.axeOrPickaxe;
 import static com.simibubi.create.foundation.data.TagGen.pickaxeOnly;
 
-import com.simibubi.create.AllBlocks;
+import com.simibubi.create.foundation.block.DyedBlockList;
 
 import net.flybywire.createkineticlift.CreateKineticLift;
-import net.flybywire.createkineticlift.content.controlseat.ControlSeatBlock;
-import net.flybywire.createkineticlift.content.smart_engine_mount.SmartEngineMountBlock;
+import net.flybywire.createkineticlift.content.controlseat.SidestickBlock;
 import net.flybywire.createkineticlift.content.turbofan.AbstractTurbofanCoreBlock;
 import net.flybywire.createkineticlift.content.turbofan.TurbofanExhaustBlock;
 import net.flybywire.createkineticlift.content.turbofan.TurbofanExhaustBlockItem;
@@ -27,6 +26,7 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.phys.Vec3;
 
@@ -34,8 +34,8 @@ public class CKLBlocks {
 
 	private static final CreateRegistrate REGISTRATE = CreateKineticLift.REGISTRATE;
 
-	public static final BlockEntry<ControlSeatBlock> CONTROL_SEAT = REGISTRATE
-		.block("control_seat", ControlSeatBlock::new)
+	public static final BlockEntry<SidestickBlock> BLUE_SIDESTICK = REGISTRATE
+		.block("sidestick", SidestickBlock::new)
 		.initialProperties(SharedProperties::wooden)
 		.properties(p -> p
 			.requiresCorrectToolForDrops()
@@ -43,20 +43,6 @@ public class CKLBlocks {
 		.blockstate(CKLBlockStateGen.invertedHorizontalBlockProvider())
 		.transform(axeOrPickaxe())
 		.tag(BlockTags.NEEDS_STONE_TOOL)
-		.item()
-		.build()
-		.recipe((ctx, prov) ->
-			ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ctx.get(), 1)
-				.pattern("LM")
-				.pattern("SW")
-				.pattern("SS")
-				.define('L', Items.LEVER)
-				.define('M', AllItems.PRECISION_MECHANISM)
-				.define('S', ItemTags.WOODEN_SLABS)
-				.define('W', Items.BLUE_WOOL)
-				.unlockedBy("has_ingredient", RegistrateRecipeProvider.has(AllItems.PRECISION_MECHANISM))
-				.save(prov)
-		)
 		.register();
 
 	public static final BlockEntry<TurbofanIntakeBlock> REGULAR_TURBOFAN_INTAKE = REGISTRATE
@@ -114,6 +100,13 @@ public class CKLBlocks {
 		.transform(pickaxeOnly())
 		.tag(BlockTags.NEEDS_IRON_TOOL)
 		.register();
+
+	public static final DyedBlockList<SidestickBlock> DYED_SIDESTICK_BLOCKS = new DyedBlockList<>(color -> {
+		String colorName = color.getSerializedName();
+		if (color == DyeColor.BLUE) {
+			return BLUE_SIDESTICK_BLOCK
+		}
+	)
 
 	public static void register() {
 	}

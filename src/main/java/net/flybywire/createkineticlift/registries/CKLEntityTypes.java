@@ -3,7 +3,7 @@ package net.flybywire.createkineticlift.registries;
 import dev.ryanhcode.sable.index.SableTags;
 
 import net.flybywire.createkineticlift.CreateKineticLift;
-import net.flybywire.createkineticlift.content.controlseat.ControlSeatEntity;
+import net.flybywire.createkineticlift.content.controlseat.SidestickEntity;
 
 import com.simibubi.create.content.contraptions.actors.seat.SeatEntity;
 import com.simibubi.create.foundation.data.CreateRegistrate;
@@ -15,8 +15,8 @@ public class CKLEntityTypes {
 
 	private static final CreateRegistrate REGISTRATE = CreateKineticLift.REGISTRATE;
 
-	public static final EntityEntry<ControlSeatEntity> CONTROL_SEAT = REGISTRATE
-		.<ControlSeatEntity>entity("control_seat", ControlSeatEntity::new, MobCategory.MISC)
+	public static final EntityEntry<SidestickEntity> CONTROL_SEAT = REGISTRATE
+		.<SidestickEntity>entity("control_seat", SidestickEntity::new, MobCategory.MISC)
 		.properties(properties -> properties
 			.sized(0.25F, 0.35F)
 			.setTrackingRange(5)
