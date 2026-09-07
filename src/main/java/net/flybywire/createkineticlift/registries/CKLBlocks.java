@@ -35,6 +35,7 @@ public class CKLBlocks {
 	private static final CreateRegistrate REGISTRATE = CreateKineticLift.REGISTRATE;
 
 	public static final BlockEntry<SidestickBlock> BLUE_SIDESTICK = REGISTRATE
+
 		.block("sidestick", SidestickBlock::new)
 		.initialProperties(SharedProperties::wooden)
 		.properties(p -> p

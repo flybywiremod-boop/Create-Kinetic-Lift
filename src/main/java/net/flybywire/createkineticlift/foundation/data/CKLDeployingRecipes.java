@@ -28,8 +28,3 @@ public class CKLDeployingRecipes extends DeployingRecipeGen {
 		}
 	}
 
-	@Override
-	public @NotNull String getName() {
-		return "Aero's Devious Deploying Recipes";
-	}
-}
