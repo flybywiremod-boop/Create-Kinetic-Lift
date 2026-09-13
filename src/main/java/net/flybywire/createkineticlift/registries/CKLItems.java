@@ -2,15 +2,12 @@ package net.flybywire.createkineticlift.registries;
 
 import net.flybywire.createkineticlift.CreateKineticLift;
 import net.flybywire.createkineticlift.content.cable.ComputerCableItem;
-import net.flybywire.createkineticlift.content.turbofan.blades.TurbofanBladeItem;
 
 import com.simibubi.create.AllItems;
 import com.simibubi.create.foundation.data.AssetLookup;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import com.tterrag.registrate.util.entry.ItemEntry;
-
-import net.flybywire.createkineticlift.content.turbofan_engine.TurbofanEngineItem;
 
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;

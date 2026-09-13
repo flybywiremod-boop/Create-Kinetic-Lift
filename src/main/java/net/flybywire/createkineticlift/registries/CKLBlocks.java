@@ -1,142 +1,68 @@
 package net.flybywire.createkineticlift.registries;
 
-import static com.simibubi.create.foundation.data.TagGen.axeOrPickaxe;
-import static com.simibubi.create.foundation.data.TagGen.pickaxeOnly;
-
 import com.simibubi.create.foundation.block.DyedBlockList;
+
+import com.simibubi.create.foundation.utility.DyeHelper;
+
+import com.tterrag.registrate.providers.RegistrateLangProvider;
+import com.tterrag.registrate.providers.RegistrateRecipeProvider;
+
+import dev.simulated_team.simulated.index.SimBlocks;
+
+import dev.simulated_team.simulated.index.SimTags;
 
 import net.flybywire.createkineticlift.CreateKineticLift;
 import net.flybywire.createkineticlift.content.controlseat.SidestickBlock;
-import net.flybywire.createkineticlift.content.turbofan.AbstractTurbofanCoreBlock;
-import net.flybywire.createkineticlift.content.turbofan.TurbofanExhaustBlock;
-import net.flybywire.createkineticlift.content.turbofan.TurbofanExhaustBlockItem;
-import net.flybywire.createkineticlift.content.turbofan.TurbofanIntakeBlock;
-import net.flybywire.createkineticlift.content.turbofan.TurbofanIntakeBlockItem;
-import net.flybywire.createkineticlift.content.turbofan.TurbofanStructuralBlock;
-import net.flybywire.createkineticlift.foundation.data.CKLBlockStateGen;
 
-import com.simibubi.create.AllItems;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.data.SharedProperties;
-import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import com.tterrag.registrate.util.entry.BlockEntry;
 
-import net.minecraft.core.Direction;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
-import net.minecraft.tags.BlockTags;
+import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.phys.Vec3;
 
 public class CKLBlocks {
 
 	private static final CreateRegistrate REGISTRATE = CreateKineticLift.REGISTRATE;
 
 	public static final BlockEntry<SidestickBlock> BLUE_SIDESTICK = REGISTRATE
-
-		.block("sidestick", SidestickBlock::new)
+		.block("sidestick", p -> new SidestickBlock(p, DyeColor.BLUE) )
+		.lang("Sidestick")
 		.initialProperties(SharedProperties::wooden)
-		.properties(p -> p
-			.requiresCorrectToolForDrops()
-			.strength(1.0f))
-		.blockstate(CKLBlockStateGen.invertedHorizontalBlockProvider())
-		.transform(axeOrPickaxe())
-		.tag(BlockTags.NEEDS_STONE_TOOL)
-		.register();
+		.properties(p -> p.mapColor(DyeColor.BLUE))
 
-	public static final BlockEntry<TurbofanIntakeBlock> REGULAR_TURBOFAN_INTAKE = REGISTRATE
-		.block("regular_turbofan_intake", TurbofanIntakeBlock::new)
+		.recipe((c, p) -> {
+			ShapedRecipeBuilder.shaped(RecipeCategory.MISC, c.get(), 1)
+				.pattern("L")
+				.pattern("W")
+				.define("L", SimBlocks.THROTTLE_LEVER)
+				.define("W", DyeHelper.getWoolOfDye(DyeColor.BLUE))
+				.group("createkineticlift:sidestick")
+				.unlockedBy("has_ingredient", RegistrateRecipeProvider.has(ItemTags.WOOL))
+				.save(p);
+			ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, c.get())
+				.group("createkineticlift:sidestick")
+				.requires(SimTags.Items.dyesTag(color))
+		}
 
-		.initialProperties(SharedProperties::softMetal)
-		.clientExtension(() -> () -> new AbstractTurbofanCoreBlock.RenderProperties())
-		.properties(p -> p
-			.requiresCorrectToolForDrops()
-			.strength(5.5f, 4.0f)
-			.noOcclusion()
-			.isSuffocating((state, level, pos) -> false))
-		.blockstate(CKLBlockStateGen.customHorizontalBlockProvider("regular_turbofan_intake_body"))
-		.transform(pickaxeOnly())
-		.tag(BlockTags.NEEDS_IRON_TOOL)
-		.item(TurbofanIntakeBlockItem::new)
+
+		.item()
 		.build()
-		.register();
-
-	public static final BlockEntry<TurbofanExhaustBlock> REGULAR_TURBOFAN_EXHAUST = REGISTRATE
-		.block("regular_turbofan_exhaust", p -> {
-			p
-				.dynamicShape()
-				.requiresCorrectToolForDrops()
-				.strength(5.5f, 4.0f)
-				.noOcclusion()
-				.isSuffocating((state, level, pos) -> false);
-			p
-				.offsetFunction = (state, level, pos) -> {
-				Direction facing = state.getValue(TurbofanExhaustBlock.FACING);
-				return Vec3.atLowerCornerOf(facing.getNormal()).scale(-0.125);
-			};
-			// There GOTTA be a better way to offset a model
-			return new TurbofanExhaustBlock(p);
-		})
-		.clientExtension(() -> () -> new AbstractTurbofanCoreBlock.RenderProperties())
-		.blockstate(CKLBlockStateGen.horizontalBlockProvider())
-		.transform(pickaxeOnly())
-		.tag(BlockTags.NEEDS_IRON_TOOL)
-		.item(TurbofanExhaustBlockItem::new)
-		.build()
-		.register();
-
-	public static final BlockEntry<TurbofanStructuralBlock> TURBOFAN_STRUCTURAL = REGISTRATE
-		.block("turbofan_structure", TurbofanStructuralBlock::new)
-		.initialProperties(SharedProperties::softMetal)
-		.clientExtension(() -> () -> new TurbofanStructuralBlock.RenderProperties())
-		.properties(p -> p
-			.requiresCorrectToolForDrops()
-			.strength(5.5f, 4.0f)
-			.noOcclusion()
-			.isSuffocating((state, level, pos) -> false))
-		.blockstate((ctx, prov) -> {
-		})
-		.transform(pickaxeOnly())
-		.tag(BlockTags.NEEDS_IRON_TOOL)
 		.register();
 
 	public static final DyedBlockList<SidestickBlock> DYED_SIDESTICK_BLOCKS = new DyedBlockList<>(color -> {
 		String colorName = color.getSerializedName();
 		if (color == DyeColor.BLUE) {
-			return BLUE_SIDESTICK_BLOCK
+			return BLUE_SIDESTICK_BLOCK;
+		} else {
+			return REGISTRATE.block(colorName + "_sidestick", p -> new SidestickBock(p,color))
+				.lang(RegistrateLangProvider.toEnglishName(color.getName()) + "Sidestick")
 		}
 	)
 
 	public static void register() {
 	}
-
-//	public static final BlockEntry<SmartEngineMountBlock> SMART_ENGINE_MOUNT_BLOCK = REGISTRATE
-//		.block("smart_engine_mount", SmartEngineMountBlock::new)
-//		.initialProperties(SharedProperties::softMetal)
-//		.properties(p -> p
-//			.requiresCorrectToolForDrops()
-//			.strength(5.5f, 4.0f)
-//			.noOcclusion())
-//		.blockstate(CKLBlockStateGen.horizontalBlockProvider())
-//		.transform(pickaxeOnly())
-//		.tag(BlockTags.NEEDS_IRON_TOOL)
-//		.item()
-//		.build()
-//		.recipe((ctx, prov) ->
-//			ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ctx.get(), 1)
-//				.pattern(" IE")
-//				.pattern("ITP")
-//				.define('I', AllItems.IRON_SHEET)
-//				.define('E', AllItems.ELECTRON_TUBE)
-//				.define('T', AllBlocks.FLUID_TANK)
-//				.define('P', AllBlocks.FLUID_PIPE)
-//				.unlockedBy("has_ingredient", RegistrateRecipeProvider.has(AllItems.PRECISION_MECHANISM))
-//				.save(prov)
-//		)
-//		.register();
-
-//	public static void register() {
-//	}
 }

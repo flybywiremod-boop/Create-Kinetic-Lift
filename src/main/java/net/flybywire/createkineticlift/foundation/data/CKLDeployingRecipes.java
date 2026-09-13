@@ -28,3 +28,8 @@ public class CKLDeployingRecipes extends DeployingRecipeGen {
 		}
 	}
 
+	@Override
+	public @NotNull String getName() {
+		return "Kinetic's Devious Deploying Recipes";
+	}
+}
