@@ -45,7 +45,7 @@ public class CKLBlocks {
 				.save(p);
 			ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, c.get())
 				.group("createkineticlift:sidestick")
-				.requires(SimTags.Items.dyesTag(color))
+				.requires(CKLTags.Items.dyesTag(DyeColor.BLUE))
 		}
 
 
